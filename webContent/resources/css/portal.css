@@ -1,0 +1,598 @@
+/*==================================BASE.CSS==============================*/
+/*
+ * Contains default styles, usually for single element selectors.
+ * 
+ * A Base style is applied to an element using an element selector, a
+ * descendant selector, or a child selector, along with any pseudo classes.
+ * It doesn’t include any class or ID selectors. It is defining the
+ * default styling for how that element should look in all occurrences
+ * on the page.
+ * 
+ * Example of base styles:
+ * 
+ * html, body, form { 
+ *   margin: 0;
+ *   padding: 0;
+ * }
+ * input[type=text] {
+ *   border: 1px solid #999;
+ * }
+ * a {
+ *   color: #039;
+ * }
+ * a:hover {
+ *   color: #03C;
+ * }
+ *
+ * Base styles include setting heading sizes, default link styles, default
+ * font styles, and body backgrounds. There should be no need to use
+ * !important in a Base style.
+ *
+ */
+a, div, span, input, textarea, li, strong, button {
+  outline: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+a, div, span, p, input, textarea, li, strong, button {
+  font-family: 'robotoregular' !important;
+}
+/* Add action icon delegate, reserve, open, reset for task widget*/
+@font-face {
+  font-family: "true-minimalistic-icons";
+  src:url("#{resource['true-minimalistic-icons:true-minimalistic-icons.eot']}");
+  src:url("#{resource['true-minimalistic-icons:true-minimalistic-icons.eot']}?#iefix") format("embedded-opentype"),
+    url("#{resource['true-minimalistic-icons:true-minimalistic-icons.woff']}") format("woff"),
+    url("#{resource['true-minimalistic-icons:true-minimalistic-icons.ttf']}") format("truetype"),
+    url("#{resource['true-minimalistic-icons:true-minimalistic-icons.svg']}#true-minimalistic-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "true-minimalistic-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="tmi-"]:before,
+[class*=" tmi-"]:before {
+  font-family: "true-minimalistic-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.tmi-box-arrow-left:before {
+  content: "\e03c";
+}
+.tmi-box-arrow-right:before {
+  content: "\e03d";
+}
+.tmi-box-arrow-toinside:before {
+  content: "\e03e";
+}
+.tmi-chevorn-right:before {
+  content: "\44";
+}
+/*==================================STATE.CSS==============================*/
+/*
+ * State styles are ways to describe how our modules or layouts will
+ * look when in a particular state. Is it hidden or expanded? Is it active
+ * or inactive? They are about describing how a module or layout
+ * looks on screens that are smaller or bigger. They are also about describing
+ * how a module might look in different views like the home
+ * page or the inside page.
+ * 
+ * Example of state styles:
+ *
+ * .is-tab-active {
+ *   background-color: white;
+ *   color: black;
+ * }
+ *
+ * Note: A sub-module style and a state style. They both modify the existing look of an element.
+ * However, they differ in two key ways:
+ *  1. State styles can apply to layout and/or module styles;
+ *  and
+ *  2. State styles indicate a JavaScript dependency.
+ */
+.task-priority-low {
+  color: #43A047;
+}
+
+.task-priority-normal {
+  color: #F7D100;
+}
+
+.task-priority-high {
+  color: #E53935;
+}
+
+.in-progress-case {
+  color: #43A047;
+}
+
+.done-case {
+  color: #546e7a;
+}
+/*==================================LAYOUT.CSS==============================*/
+/*
+ * Contains styles divide the page into sections, usually holding modules together.
+ *
+ * From a layout perspective, all we care about is how each item relates
+ * to each other. We don’t care, necessarily, about the design of
+ * the modules themselves nor do we want to have to worry about the
+ * context that this layout sits within.
+ *
+ * Example of layout styles:
+ *
+ * #article {
+ *   width: 80%;
+ *   float: left;
+ * }
+ * #side-bar {
+ *   width: 20%;
+ *   float: right;
+ * }
+ * .l-fixed #article {
+ *   width: 600px;
+ * }
+ * .l-fixed #side-bar {
+ *   width: 200px;
+ * }
+ *
+ * Naming rules: use an l- prefix. This helps easily identify
+ * the purpose of these styles and separate them from Modules or States.
+ *
+ */
+/*==================================UTILITY.CSS==============================*/
+/**
+ * Sometimes we need a universal class that can be used in any component. 
+ * Things like clear fixes, vertical alignment, and text truncation.
+ * Denote these classes by prefixing them with .u-.
+ *
+ * All the utils should be in a single file. There shouldnt be any need to overwrite them in components or mixins.
+ *
+ * You should really only need a few utilities. 
+ * We dont need something like .u-float-left { float: left; } where including float: left; in the component is just as easy
+ * and more visible.
+ */
+.u-truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-break-word {
+  word-wrap: break-word;
+}
+
+.u-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.u-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 55%;
+  right: 55%;
+  bottom: 0;
+  background: #fff;
+  height: 1px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.u-underline-from-center:hover:before, .u-underline-from-center:focus:before, .u-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+.u-display-none {
+  display: none;
+}
+
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
+.u-hover-effect {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.u-hover-effect:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.u-shadow-effect {
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(43, 59, 93, 0.4);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(43, 59, 93, 0.4);
+  box-shadow: 0px 1px 3px 0px rgba(43, 59, 93, 0.4);
+}
+
+.u-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.u-line-separator {
+  border-bottom: solid 1px #E0E0E0;
+  display: block;
+  overflow: hidden;
+  height: 0px;
+  margin: 10px -20px;
+  clear: both;
+}
+
+.u-separator {
+  border-bottom: solid 1px #E0E0E0;
+  width: 100%;
+  overflow: hidden;
+  height: 0px;
+  margin: 10px 0px;
+  clear: both;
+}
+
+.u-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.u-no-border {
+  border: none;
+}
+
+.u-buttons-spacer {
+  width: 5px;
+}
+
+.u-text-align-center {
+  text-align: center;
+}
+
+.u-vertical-align-center {
+  vertical-align: middle;
+}
+
+.u-dialog-footer {
+  position: relative;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+}
+/*==================================TEMPLATE (PORTAL TEMPLATE)==============================*/
+/* Style for Basic Template */
+.header-panel {
+  position: static !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ui-layout-container .ui-layout-unit {
+  border: none;
+  border-radius: 0;
+}
+
+.ui-layout-unit-content.ui-widget-content {
+  padding: 0 !important;
+}
+
+.main-menu-panel .ui-layout-unit-content {
+  width: 100%;
+}
+
+.main-menu-panel.ui-layout-unit, .main-area-panel.ui-layout-unit {
+  padding: 0;
+}
+
+.main-area-panel-container {
+  min-width: 1000px;
+  padding: 20px;
+}
+
+.main-area-panel-container.third-party-application {
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*Uses for customize modena layout (modena-layout.css) */
+#layout-portlets-cover {
+  height: calc(100% - 80px);
+}
+
+#layout-portlets-cover>div {
+  height: 100%;
+}
+
+#logo>img {
+  height: 42px;
+  margin: 5px 0 0 10px;
+}
+
+#top-menu {
+  transition: margin-right .3s;
+}
+
+#top-menu.mod-chat-active {
+  margin-right: 300px;
+}
+
+#top-menu.mod-chat-active.mod-chat-message-displayed {
+  margin-right: 600px;
+}
+
+#top-menu li ul {
+  border-radius: 5px !important;
+}
+
+#top-menu li ul li input[type="text"] {
+  padding: 0 !important;
+  width: 100%;
+  border-bottom-color: #D1D3D4;
+}
+
+#top-menu li ul li input[type="text"]::-webkit-input-placeholder {
+  color: #465B65;
+  opacity: 0.5
+}
+
+#top-menu li ul li input[type="text"]:-moz-placeholder {
+  color: #465B65;
+  opacity: 0.5;
+}
+
+#top-menu li ul li input[type="text"]::-moz-placeholder {
+  color: #465B65;
+  opacity: 0.5;
+}
+
+#top-menu li ul li input[type="text"]:-ms-input-placeholder {
+  color: #465B65;
+  opacity: 0.5;
+}
+
+#top-menu li a {
+  color: rgb(84, 110, 122) !important;
+  padding-left: 15px;
+  padding-right: 13px;
+  border-radius: 0;
+  width: auto;
+  font-size: 20px;
+}
+
+#top-menu>li>a {
+  height: auto;
+  border-left: 2px solid rgba(84, 110, 122, 0.4);
+  padding-top: 0;
+  margin-top: 5px;
+}
+
+#global-search-container>li>span {
+  color: #546E7A;
+  padding: 15px;
+  display: block;
+  font-family: "robotoregular";
+}
+
+#global-search-container.active-menu {
+  margin: 20px 0px 0px -400px !important;
+  width: 450px;
+}
+
+#global-search-container li div.global-search-result {
+  padding: 0 15px 15px;
+}
+
+#global-search-container div a {
+  padding: 0 0 0 25px !important;
+  line-height: 1.5;
+}
+
+#global-search-container .global-search-result-container div span {
+  display: block;
+  border-bottom: 1px solid #D1D3D4;
+  margin-bottom: 10px;
+  color: #546E7A;
+  line-height: 2;
+}
+
+#global-search-result-container {
+  height: auto;
+  max-height: 75vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#user-setting-container.active-menu {
+  margin: 20px 0px 0px -100px !important;
+}
+
+/*
+	Overide default state of ui-layout-container in Internet Explorer
+*/
+.ui-layout-container {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  height: 100%;
+}
+
+.fa:before {
+  font-family: 'FontAwesome' !important;
+}
+
+.ui-outputlabel .ui-outputlabel-rfi {
+  margin-left: 0.2em;
+  color: #f03369;
+}
+
+.ui-message.ui-message-error {
+  border: none;
+  margin: 5px 0 0 0;
+  padding: 0 !important;
+}
+
+.ui-dialog .ui-dialog-content .ui-icon-alert {
+  margin-top: 0;
+}
+/*Case Template*/
+.case-template-title-icon {
+  margin-right: 5px;
+}
+
+.case-template-content {
+  margin-top: 30px;
+}
+
+.case-template-add-note-command {
+  z-index: 1;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: calc(98% - 65px);
+}
+
+/*Portal Home*/
+.l-widget-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: -20px;
+}
+
+.l-widget-container>* {
+  margin: 20px;
+}
+
+.l-process-widget {
+  -webkit-box-flex: 3;
+  -ms-flex: 3 200px;
+  flex: 3 200px;
+}
+
+.l-task-widget {
+  -webkit-box-flex: 6;
+  -ms-flex: 6 400px;
+  flex: 6 400px;
+}
+
+.l-statistic-widget {
+  -webkit-box-flex: 3;
+  -ms-flex: 3 300px;
+  flex: 3 300px;
+}
+
+/*Task template*/
+.task-template-title-icon {
+  margin-right: 5px;
+}
+
+.task-template-content {
+  margin-top: 30px;
+  position: relative;
+}
+
+.task-template-tasks-command {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/*ERROR PAGE*/
+.error-container {
+  width: 33.3%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+  text-align: center;
+  color: #546E7A;
+}
+
+.message {
+  background-color: white;
+  padding: 20px;
+}
+
+.message .message-header {
+  margin: 16px 0px;
+  font-size: 2em;
+  color: #E67163;
+}
+
+.message .message-separator {
+  border: 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.message .message-container {
+  font-size: 1.5em;
+  margin: 16px 0px;
+}
+
+.message .message-container .message-detail {
+  font-size: 0.7em;
+}
+
+.message .message-container .message-detail:hover {
+  text-decoration: underline;
+}
+
+.message .message-footer .ui-button {
+  font-size: 1.1em;
+}
+
+.message .message-footer {
+  margin-top: 10px;
+}
+
+input[id$=":non-ajax-keyword-filter"]::-ms-clear, input[id$=":ajax-keyword-filter"]::-ms-clear{
+	display: none; width:0; height:0;
+}

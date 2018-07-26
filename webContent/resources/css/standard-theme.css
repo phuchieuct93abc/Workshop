@@ -1,0 +1,527 @@
+/* GENERAL -------------------------------------------------------------------*/
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 12px;
+  color: black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+.ui-link {
+  color: black !important;
+}
+
+.js-widget-container {
+  padding-top: 19px;
+  margin: 0 auto;
+  float: none;
+}
+
+.main-area-panel-container,
+.l-widget-container > * {
+  margin: 0;
+  padding: 0;
+}
+
+.main-area-panel-container .js-widget-container {
+	min-width: 1200px;
+}
+
+/* END - GENERAL -------------------------------------------------------------*/
+/* LOGIN FORM ----------------------------------------------------------------*/
+#login-form {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login-form form {
+  position: relative;
+}
+#login-form form > div:nth-child(5),
+#login-form form > div:nth-child(7) {
+  height: 32px;
+}
+#login-form form > div:nth-child(3) {
+  position: absolute;
+  bottom: 53px;
+}
+#login-form form > div:nth-child(3) .ui-messages .ui-messages-error-icon,
+#login-form form > div:nth-child(3) .ui-messages .ui-messages-error-detail {
+  display: none;
+}
+#login-form form > div:nth-child(3) .ui-messages ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#login-form form > div:nth-child(3) .ui-messages .ui-messages-error {
+  border: medium none;
+  padding: 0px !important;
+  margin: 0px;
+  font-size: 1em;
+  color: #ff4639;
+}
+#login-form form > div:nth-child(3) .ui-messages .ui-messages-error-summary {
+  margin-left: 0px;
+  font-weight: normal;
+  font-size: 1em;
+}
+#login-form form > div:nth-child(6) {
+  height: 5px;
+}
+#login-form .Card {
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.5);
+}
+#login-form .BigTopic {
+  color: black;
+  font-size: 2em !important;
+  padding: 0;
+  margin-bottom: 8px;
+}
+#login-form .BigTopic img {
+  height: 50px;
+  margin-bottom: 9px;
+}
+#login-form > .MarTopPerc5 {
+  margin-top: 0px;
+}
+#login-form > .MarTopPerc5 > .Wid33 {
+  margin-top: -5%;
+  width: 430px;
+}
+#login-form > .MarTopPerc5 > .Wid33 .EmptyBox20 {
+  height: 0;
+}
+#login-form > .MarTopPerc5 > .Wid33 .EmptyBox30 {
+  height: 0;
+}
+#login-form > .MarTopPerc5 > .Wid33 .EmptyBox30:nth-child(8) {
+  height: 46px;
+}
+#login-form .ui-inputfield {
+  color: black;
+  font-size: 1.3em !important;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  padding: 3px !important;
+  transition: none !important;
+}
+#login-form .ui-inputfield:focus {
+  border-bottom-width: 2px;
+  border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+}
+#login-form .ui-inputfield:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+}
+#login-form .ui-inputfield:-ms-input-placeholder:hover {
+	color: rgba(0, 0, 0, 0.3) !important;
+}
+#login-form .ui-button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: black;
+  box-shadow: none !important;
+  font-size: 1em !important;
+}
+#login-form .ui-button-text {
+  padding: 0 0 0 28px !important;
+  font-size: 1.16666666667em;
+}
+#login-form .ui-button-text::before {
+  font-family: 'FontAwesome' !important;
+  content: "\f090";
+  position: absolute;
+  left: 0;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+#login-form [id$="login-button"] {
+  margin-bottom: 5px;
+}
+#login-form input:-webkit-autofill {
+  background-color: transparent !important;
+}
+
+/* END - LOGIN FORM ----------------------------------------------------------*/
+/* TOPBAR --------------------------------------------------------------------*/
+#layout-topbar {
+  text-align: center;
+  background-color: transparent;
+  box-shadow: none;
+  height: 51px;
+  width: 100%;
+  padding: 24px 0 0 0;
+}
+#layout-topbar .action-wrapper {
+  position: absolute;
+  display: inline;
+  top: 17px;
+  font-size: 1em;
+}
+#layout-topbar .action-wrapper.right-action-wrapper {
+  right: 24px;
+}
+#layout-topbar .action-wrapper.left-action-wrapper {
+  left: 24px;
+}
+#layout-topbar .action-wrapper.left-action-wrapper .fa-angle-left:before {
+  top: 2px;
+}
+#layout-topbar .fa::before {
+  font-size: 1.6em;
+  top: 3px;
+  position: relative;
+  padding-right: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#logo > img {
+  height: 50px;
+  margin: 0;
+}
+
+/* END - TOPBAR --------------------------------------------------------------*/
+/* HEADER BACKGROUND */
+.js-widget-container .widget-header-main {
+  background-image: url("#{resource['resources/images/spacer_shadow_top.png']}");
+  background-repeat: no-repeat;
+  height: 90px;
+  position: relative;
+}
+.js-widget-container .js-process-widget .widget-header-main {
+  background-position: left 30px;
+  background-size: 300%;
+}
+.js-widget-container .task-widget .widget-header-main {
+  background-position: right 30px;
+  background-size: 150%;
+}
+.js-widget-container .widget-header-main .widget-header-main-menu {
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 3px;
+}
+.js-widget-container .js-process-widget .widget-header-main-menu {
+  display: none;
+  left: 0;
+  right: 30px;
+}
+.js-widget-container .task-widget .widget-header-main-menu {
+  left: 0;
+  right: 0px;
+}
+.js-widget-container .switch-mode-command-icon {
+  display: none;
+}
+
+/* START PROCESS -------------------------------------------------------------*/
+.widget-header {
+  color: black;
+  border-bottom: none;
+}
+
+.widget-header-main-title {
+  font-size: 1.16666666667em;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+
+.widget-header-main-menu li {
+  font-size: .9em;
+}
+
+.widget-content-scroll-button {
+  display: none;
+}
+
+.process-start-list-item {
+  height: 50px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 5px;
+  color: black;
+  margin: 7px 0;
+  padding: 0;
+  transition: background 0.3s linear;
+}
+.process-start-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.process-start-list-item-name {
+  font-size: 1em;
+  width: auto;
+}
+
+[id$="process-list"] {
+  margin-top: 17px;
+  margin-right: 30px;
+}
+[id$="process-list"] a {
+  display: block;
+  border-bottom: 1px solid black;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+[id$="process-list"] a:first-of-type {
+  border-top: 1px solid black;
+  border-top-color: rgba(0, 0, 0, 0.2);
+}
+[id$="process-list"] a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+[id$="process-list"] a:hover .process-start-list-item-icon {
+  color: #da2f2b;
+}
+[id$="process-list"] .process-start-list-item-icon {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 1.6em;
+  padding: 0 20px;
+  width: auto;
+}
+[id$="process-list"] .process-start-list-item-action {
+  float: right;
+  width: auto;
+  padding: 0 20px;
+}
+
+.process-action-button,
+form[style].process-action-button {
+  display: none !important;
+}
+
+/* END - START PROCESS -------------------------------------------------------*/
+/* TASK LIST -----------------------------------------------------------------*/
+.task-widget-header-container {
+  margin: 0;
+  padding: 0;
+}
+
+.task-widget .ui-datascroller-item {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+.task-widget .ui-datascroller-item:first-of-type {
+  border-top: 1px solid;
+}
+.task-widget .ui-datascroller {
+  border-radius: initial;
+  border: none;
+  background-color: transparent;
+}
+.task-widget .ui-datascroller .ui-datascroller-list {
+  margin-top: 17px;
+}
+.task-widget .switch-mode-command-icon {
+  display: none;
+}
+.task-widget .u-underline-from-center:before {
+  background: none;
+}
+
+.task-start-list-item {
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  font-size: 1em;
+}
+
+.task-start-priority {
+  width: auto;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.task-start-info-content {
+  margin-bottom: 4px;
+  margin-top: 3px;
+}
+
+.task-start-info-footer {
+  font-size: .9em;
+  display: block;
+}
+
+.task-start-info-header {
+  font-size: .9em;
+}
+
+.task-start-container {
+  height: 70px;
+  padding: 0;
+  margin: 7px 0;
+  border-radius: 5px;
+  transition: background 0.3s linear;
+}
+.task-start-container:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.task-view-container .ui-datascroller .ui-datascroller-content,
+.case-widget-container .ui-datascroller .ui-datascroller-content {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+.task-view-container .ui-datascroller .ui-datascroller-content .ui-datascroller-item,
+.case-widget-container .ui-datascroller .ui-datascroller-content .ui-datascroller-item {
+  margin-right: 14px;
+}
+
+.task-widget-filter {
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+}
+
+.task-widget-filter .ui-selectonemenu {
+	display: block;
+	border-bottom-color: #C6C6C6 !important;
+	min-width: 190px;
+	padding: 0px 40px 0px 0px !important;
+}
+
+.task-widget-filter .ui-selectonemenu.ui-state-focus {
+	border-bottom-color: #757575 !important;
+}
+
+.task-widget-filter .ui-selectonemenu,
+[id*="task-widget"] .ui-selectonemenu-items-wrapper {
+	font-size: 1em !important;
+}
+
+[id*="task-widget"] .ui-selectonemenu-items-wrapper .ui-selectonemenu-list-item {
+	font-size: .9em !important;
+}
+
+.task-widget-filter .ui-inputfield {
+	font-size: .9em;
+	padding: 7px 24px 5px 10px !important;
+	background: transparent;
+	color: #757575;
+}
+
+.task-widget-filter .ui-selectonemenu-trigger {
+	background: transparent;
+}
+
+.task-widget-filter .ui-selectonemenu-trigger .ui-icon {
+	margin-top: 7px !important;
+	background-size: 100%;
+}
+
+.task-widget-filter .filter-widget-icon {
+	bottom: 7px;
+	color: #757575;
+}
+
+/* END - TASK LIST -----------------------------------------------------------*/
+
+/* UI - Dialog ***********************************************************/
+.ui-dialog .ui-dialog-titlebar {
+    padding: 12px 24px !important;
+    position: relative;
+}
+
+.ui-dialog .ui-dialog-title, .ui-dialog .ui-dialog-titlebar {
+    font-size: 1.1666em;
+    color: rgba(0,0,0,1);
+}
+
+.ui-dialog .ui-dialog-titlebar::before {
+	content: "";
+	top: 56px;
+	width: calc(100%);
+	position: absolute;
+	border-bottom: solid 1px rgba(0,0,0,0.3);
+	width: calc(100% - 48px);
+	left: 24px;
+}
+
+.ui-confirm-dialog .ui-dialog-content .ui-confirm-dialog-message {
+    color: rgba(0,0,0,1);
+    font-size: 1.333em;
+}
+
+.ui-icon.ui-icon-alert.ui-confirm-dialog-severity {
+	display: none;
+}
+
+.ui-dialog .ui-dialog-footer {
+    border-top: 0;
+    background-color: #FFF;
+    padding: 24px !important;
+    overflow: hidden;
+}
+
+.ui-confirmdialog-yes,
+.ui-button-primary {
+	background-color: #B4E266 !important;
+}
+
+.ui-confirmdialog-no,
+.ui-button-slave {
+	background-color: #FF8282 !important;
+}
+
+.ui-dialog .ui-dialog-footer, .ui-dialog .ui-dialog-titlebar {
+	border: 0 !important;
+}
+
+.ui-dialog .ui-dialog-content{
+	padding: 0px 24px !important;
+	margin-top: 24px;
+	overflow: hidden;
+}
+
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-closethick {
+	    background: none;
+}
+
+.ui-icon-closethick::before {
+    content: "\f00d";
+    font-family: "Fontawesome" !important;
+    color: inherit;
+    font-size: 1.1666em;
+}
+
+.ui-icon.ui-icon-closethick {
+	color: rgba(0,0,0,0.4);
+}
+
+.ui-icon.ui-icon-closethick:hover {
+	 color: rgba(0,0,0,1) !important;
+}
+
+.ui-dialog {
+	box-shadow: 0 0 10px 0px rgba(0,0,0,0.5) !important;
+	border-radius: 10px;
+}
+
+/* END - UI - Dialog *****************************************************/
+/* START - Note***********************************************************/
+.note-comment{
+	white-space:pre;
+}
+/* END - Note*************************************************************/
+
+/*START - Autocomplete input*/
+
+input[type="autocomplete"].ui-state-error{
+  border-bottom: 1px solid #e10040 !important;
+  color: #e10040;
+}
+/*END - Autocomplete input*/
+
+:-ms-input-placeholder.ui-inputfield{
+	color: #cdcdcd;
+}
