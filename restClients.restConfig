@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<restClients/>
+<restClients>
+    <restClient>
+        <uuid>6649babd-2696-4946-98e4-04b979cea200</uuid>
+        <name>restService</name>
+        <configuration>
+            <uri>http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.engine.context}/api/{ivy.request.application}/getPersons</uri>
+            <property>
+                <name>JSON.Deserialization.FAIL_ON_UNKNOWN_PROPERTIES</name>
+                <value>false</value>
+                <password>false</password>
+            </property>
+            <property>
+                <name>username</name>
+                <value>testUser</value>
+                <password>false</password>
+            </property>
+            <feature>
+                <class>ch.ivyteam.ivy.rest.client.mapper.JsonFeature</class>
+            </feature>
+            <feature>
+                <class>ch.ivyteam.ivy.rest.client.authentication.HttpBasicAuthenticationFeature</class>
+            </feature>
+        </configuration>
+    </restClient>
+</restClients>

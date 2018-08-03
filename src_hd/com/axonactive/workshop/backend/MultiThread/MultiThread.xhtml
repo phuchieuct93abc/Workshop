@@ -10,7 +10,8 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">MultiThread</ui:define>
 		<ui:define name="content">
-			Multi thread should be here
+			<p:outputLabel value="PersonInfor"></p:outputLabel>
+			<p:outputLabel value="#{data.person.toString()}"></p:outputLabel>
 		</ui:define>
 	</ui:composition>
 </h:body>
