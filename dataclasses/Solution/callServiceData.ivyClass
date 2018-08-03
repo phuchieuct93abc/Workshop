@@ -6,3 +6,5 @@ countdown java.util.concurrent.CountDownLatch #field
 countdown PERSISTENT #fieldModifier
 countdown1 java.util.concurrent.CountDownLatch #field
 countdown1 PERSISTENT #fieldModifier
+id String #field
+id PERSISTENT #fieldModifier

@@ -34,9 +34,7 @@ ce0 @SJArc f21 '' #zField
 ce0 @SJArc f22 '' #zField
 ce0 @PushWFArc f23 '' #zField
 ce0 @PushWFArc f24 '' #zField
-ce0 @TaskSwitch f19 '' #zField
-ce0 @TkArc f25 '' #zField
-ce0 @TkArc f11 '' #zField
+ce0 @PushWFArc f11 '' #zField
 ce0 @PushWFArc f12 '' #zField
 >Proto ce0 ce0 callService #zField
 ce0 f0 inParamDecl '<com.axonactive.workshop.backend.concurrency.rest.Person person> param;' #txt
@@ -64,6 +62,8 @@ ce0 f1 393 81 30 30 0 15 #rect
 ce0 f1 @|EndSubIcon #fIcon
 ce0 f4 actionDecl 'Solution.callServiceData out;
 ' #txt
+ce0 f4 actionCode 'out.id= signal.getSignalData() as String;
+' #txt
 ce0 f4 type Solution.callServiceData #txt
 ce0 f4 signalCode b #txt
 ce0 f4 attachToBusinessCase true #txt
@@ -71,6 +71,8 @@ ce0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>b</name>
+        <nameStyle>1,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
@@ -80,14 +82,17 @@ ce0 f9 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f9 actionTable 'out=in;
 ' #txt
-ce0 f9 actionCode 'import java.util.concurrent.CountDownLatch;
+ce0 f9 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.CountdownService;
+import java.util.concurrent.CountDownLatch;
 import ch.ivyteam.ivy.process.model.value.SignalCode;
 
-in.countdown = new CountDownLatch(1);
+String id = CountdownService.put(2);
+ivy.log.fatal(id);
+ivy.wf.signals().send(new SignalCode("a"), id);
+ivy.wf.signals().send(new SignalCode("b"), id);
+CountdownService.get(id).await();
 
-ivy.wf.signals().send(new SignalCode("a"), in.countdown);
-ivy.wf.signals().send(new SignalCode("b"),in.countdown);
-in.countdown.await();' #txt
+//in.countdown.await();' #txt
 ce0 f9 type Solution.callServiceData #txt
 ce0 f9 200 74 112 44 0 -8 #rect
 ce0 f9 @|StepIcon #fIcon
@@ -96,7 +101,7 @@ ce0 f3 actionDecl 'Solution.callServiceData out;
 ce0 f3 actionCode 'import java.util.concurrent.CountDownLatch;
 
 import com.google.gson.Gson;
-
+out.id= signal.getSignalData() as String;
 
 ' #txt
 ce0 f3 type Solution.callServiceData #txt
@@ -125,10 +130,10 @@ ce0 f15 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f15 actionTable 'out=in;
 ' #txt
-ce0 f15 actionCode 'import com.axonactive.workshop.backend.concurrency.rest.RestClient;
+ce0 f15 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.CountdownService;
+import com.axonactive.workshop.backend.concurrency.rest.RestClient;
 in.person = RestClient.getInstance().getPersonById(0);
-ivy.log.fatal(in.person);
-//in.countdown.countDown();' #txt
+CountdownService.get(in.id).countDown();' #txt
 ce0 f15 security system #txt
 ce0 f15 type Solution.callServiceData #txt
 ce0 f15 189 226 112 44 0 -8 #rect
@@ -138,8 +143,10 @@ ce0 f14 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f14 actionTable 'out=in;
 ' #txt
-ce0 f14 actionCode 'import com.axonactive.workshop.backend.concurrency.rest.RestClient;
-RestClient.getInstance().getPersonById(1);' #txt
+ce0 f14 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.CountdownService;
+import com.axonactive.workshop.backend.concurrency.rest.RestClient;
+RestClient.getInstance().getPersonById(1);
+CountdownService.get(in.id).countDown();' #txt
 ce0 f14 type Solution.callServiceData #txt
 ce0 f14 243 370 112 44 0 -8 #rect
 ce0 f14 @|StepIcon #fIcon
@@ -185,27 +192,10 @@ ce0 f24 expr out #txt
 ce0 f24 111 48 256 74 #arcP
 ce0 f24 1 248 48 #addKink
 ce0 f24 0 0.6834234295346809 0 0 #arcLabel
-ce0 f19 actionDecl 'Solution.callServiceData out;
-' #txt
-ce0 f19 actionTable 'out=in1;
-' #txt
-ce0 f19 outTypes "Solution.callServiceData" #txt
-ce0 f19 outLinks "TaskA.ivp" #txt
-ce0 f19 type Solution.callServiceData #txt
-ce0 f19 template "" #txt
-ce0 f19 416 304 32 32 0 16 #rect
-ce0 f19 @|TaskSwitchIcon #fIcon
-ce0 f25 expr out #txt
-ce0 f25 type Solution.callServiceData #txt
-ce0 f25 var in1 #txt
-ce0 f25 301 270 420 316 #arcP
 ce0 f11 expr out #txt
-ce0 f11 type Solution.callServiceData #txt
-ce0 f11 var in2 #txt
-ce0 f11 340 370 422 326 #arcP
-ce0 f12 expr data #txt
-ce0 f12 outCond ivp=="TaskA.ivp" #txt
-ce0 f12 440 328 500 381 #arcP
+ce0 f11 286 270 498 384 #arcP
+ce0 f12 expr out #txt
+ce0 f12 355 392 497 392 #arcP
 >Proto ce0 .type Solution.callServiceData #txt
 >Proto ce0 .processKind CALLABLE_SUB #txt
 >Proto ce0 0 0 32 24 18 0 #rect
@@ -228,9 +218,7 @@ ce0 f18 mainOut f23 tail #connect
 ce0 f23 head f1 mainIn #connect
 ce0 f0 mainOut f24 tail #connect
 ce0 f24 head f9 mainIn #connect
-ce0 f15 mainOut f25 tail #connect
-ce0 f25 head f19 in #connect
-ce0 f14 mainOut f11 tail #connect
-ce0 f11 head f19 in #connect
-ce0 f19 out f12 tail #connect
+ce0 f15 mainOut f11 tail #connect
+ce0 f11 head f7 mainIn #connect
+ce0 f14 mainOut f12 tail #connect
 ce0 f12 head f7 mainIn #connect
