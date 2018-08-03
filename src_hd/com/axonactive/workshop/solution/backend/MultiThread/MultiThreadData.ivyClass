@@ -1,2 +1,6 @@
 MultiThreadData #class
 com.axonactive.workshop.solution.backend.MultiThread #namespace
+person com.axonactive.workshop.backend.concurrency.rest.Person #field
+person PERSISTENT #fieldModifier
+totalTime Long #field
+totalTime PERSISTENT #fieldModifier

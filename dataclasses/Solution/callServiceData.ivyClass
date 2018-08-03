@@ -1,0 +1,8 @@
+callServiceData #class
+Solution #namespace
+person com.axonactive.workshop.backend.concurrency.rest.Person #field
+person PERSISTENT #fieldModifier
+countdown java.util.concurrent.CountDownLatch #field
+countdown PERSISTENT #fieldModifier
+countdown1 java.util.concurrent.CountDownLatch #field
+countdown1 PERSISTENT #fieldModifier
