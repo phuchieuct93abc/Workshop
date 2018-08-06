@@ -19,7 +19,7 @@ public class RestAPI {
 
 	public RestAPI() {
 		addNewPerson("0", "Tin", "Dep Trai");
-		addNewPerson("1", "Steave", "Job");
+		addNewPerson("1", "Steve", "Jobs");
 		
 		addNewAddress("0", "Truong Son", "39B");
 		addNewAddress("1", "Nguyen Van Cu", "57-59B");
