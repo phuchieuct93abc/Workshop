@@ -1,6 +1,10 @@
 MultiThreadData #class
 com.axonactive.workshop.solution.backend.MultiThread #namespace
-person com.axonactive.workshop.backend.concurrency.rest.Person #field
-person PERSISTENT #fieldModifier
+personalInformation com.axonactive.workshop.backend.concurrency.rest.PersonalInformation #field
+personalInformation PERSISTENT #fieldModifier
 totalTime Long #field
 totalTime PERSISTENT #fieldModifier
+personIds java.util.List<String> #field
+personIds PERSISTENT #fieldModifier
+selectedId String #field
+selectedId PERSISTENT #fieldModifier

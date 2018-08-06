@@ -14,37 +14,32 @@ ce0 @TextInP .xml .xml #zField
 ce0 @TextInP .responsibility .responsibility #zField
 ce0 @StartSub f0 '' #zField
 ce0 @EndSub f1 '' #zField
-ce0 @SignalStartEvent f4 '' #zField
-ce0 @GridStep f9 '' #zField
-ce0 @SignalStartEvent f3 '' #zField
-ce0 @PushWFArc f5 '' #zField
-ce0 @EndTask f6 '' #zField
-ce0 @EndTask f7 '' #zField
-ce0 @GridStep f15 '' #zField
+ce0 @GridStep f5 '' #zField
+ce0 @GridStep f3 '' #zField
+ce0 @PushWFArc f6 '' #zField
 ce0 @PushWFArc f2 '' #zField
-ce0 @GridStep f14 '' #zField
-ce0 @PushWFArc f8 '' #zField
-ce0 @RestClientCall f13 '' #zField
-ce0 @RestClientCall f16 '' #zField
-ce0 @Split f17 '' #zField
-ce0 @Join f18 '' #zField
-ce0 @PushWFArc f10 '' #zField
-ce0 @PushWFArc f20 '' #zField
-ce0 @SJArc f21 '' #zField
-ce0 @SJArc f22 '' #zField
-ce0 @PushWFArc f23 '' #zField
-ce0 @PushWFArc f24 '' #zField
+ce0 @PushWFArc f4 '' #zField
+ce0 @EndTask f10 '' #zField
+ce0 @GridStep f13 '' #zField
+ce0 @SignalStartEvent f8 '' #zField
+ce0 @EndTask f9 '' #zField
+ce0 @SignalStartEvent f7 '' #zField
+ce0 @GridStep f15 '' #zField
+ce0 @PushWFArc f14 '' #zField
 ce0 @PushWFArc f11 '' #zField
+ce0 @PushWFArc f16 '' #zField
 ce0 @PushWFArc f12 '' #zField
 >Proto ce0 ce0 callService #zField
-ce0 f0 inParamDecl '<com.axonactive.workshop.backend.concurrency.rest.Person person> param;' #txt
-ce0 f0 inParamTable 'out.person=param.person;
+ce0 f0 inParamDecl '<java.lang.String id> param;' #txt
+ce0 f0 inParamTable 'out.personId=param.id;
 ' #txt
-ce0 f0 outParamDecl '<> result;
+ce0 f0 outParamDecl '<com.axonactive.workshop.backend.concurrency.rest.PersonalInformation personalInformation> result;
+' #txt
+ce0 f0 outParamTable 'result.personalInformation=in.result;
 ' #txt
 ce0 f0 actionDecl 'Solution.callServiceData out;
 ' #txt
-ce0 f0 callSignature call(com.axonactive.workshop.backend.concurrency.rest.Person) #txt
+ce0 f0 callSignature call(String) #txt
 ce0 f0 type Solution.callServiceData #txt
 ce0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -55,170 +50,213 @@ ce0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ce0 f0 81 33 30 30 -33 17 #rect
+ce0 f0 65 97 30 30 -33 17 #rect
 ce0 f0 @|StartSubIcon #fIcon
 ce0 f1 type Solution.callServiceData #txt
-ce0 f1 393 81 30 30 0 15 #rect
+ce0 f1 593 97 30 30 0 15 #rect
 ce0 f1 @|EndSubIcon #fIcon
-ce0 f4 actionDecl 'Solution.callServiceData out;
+ce0 f5 actionDecl 'Solution.callServiceData out;
 ' #txt
-ce0 f4 actionCode 'out.id= signal.getSignalData() as String;
+ce0 f5 actionTable 'out=in;
 ' #txt
-ce0 f4 type Solution.callServiceData #txt
-ce0 f4 signalCode b #txt
-ce0 f4 attachToBusinessCase true #txt
-ce0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ce0 f5 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+import com.axonactive.workshop.backend.concurrency.rest.Person;
+import com.axonactive.workshop.backend.concurrency.rest.PersonalInformation;
+import com.axonactive.workshop.backend.concurrency.rest.Address;
+
+
+in.result = new PersonalInformation();
+
+Object firstReturn = SynThreadManager.getQueue(in.queueId).take();
+Object secondReturn = SynThreadManager.getQueue(in.queueId).take();
+
+SynThreadManager.removeQueue(in.queueId);
+
+
+if (firstReturn  instanceof Address) {
+	in.result.setAddress(firstReturn as Address);
+} else {
+	in.result.setPerson(firstReturn as Person);
+}
+
+if (secondReturn instanceof Address) {
+	in.result.setAddress(secondReturn as Address);
+} else {
+	in.result.setPerson(secondReturn as Person);
+}
+
+' #txt
+ce0 f5 type Solution.callServiceData #txt
+ce0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>b</name>
-        <nameStyle>1,5,7
+        <name>await</name>
+        <nameStyle>5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-ce0 f4 113 377 30 30 -3 17 #rect
-ce0 f4 @|SignalStartEventIcon #fIcon
-ce0 f9 actionDecl 'Solution.callServiceData out;
-' #txt
-ce0 f9 actionTable 'out=in;
-' #txt
-ce0 f9 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.CountdownService;
-import java.util.concurrent.CountDownLatch;
-import ch.ivyteam.ivy.process.model.value.SignalCode;
-
-String id = CountdownService.put(2);
-ivy.log.fatal(id);
-ivy.wf.signals().send(new SignalCode("a"), id);
-ivy.wf.signals().send(new SignalCode("b"), id);
-CountdownService.get(id).await();
-
-//in.countdown.await();' #txt
-ce0 f9 type Solution.callServiceData #txt
-ce0 f9 200 74 112 44 0 -8 #rect
-ce0 f9 @|StepIcon #fIcon
+ce0 f5 302 90 112 44 -14 -8 #rect
+ce0 f5 @|StepIcon #fIcon
 ce0 f3 actionDecl 'Solution.callServiceData out;
 ' #txt
-ce0 f3 actionCode 'import java.util.concurrent.CountDownLatch;
-
-import com.google.gson.Gson;
-out.id= signal.getSignalData() as String;
-
+ce0 f3 actionTable 'out=in;
 ' #txt
+ce0 f3 actionCode 'import com.axonactive.workshop.backend.SignalTransferHelper;
+import com.axonactive.workshop.backend.soluction.concurrency.SignalTranferData;
+import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+
+import java.util.concurrent.SynchronousQueue;
+import ch.ivyteam.ivy.process.model.value.SignalCode;
+
+in.queueId = SynThreadManager.produceQueue();
+
+SignalTranferData signalData = new SignalTranferData();
+signalData.id = in.personId;
+signalData.queueId = in.queueId;
+
+SignalTransferHelper signalHelper = SignalTransferHelper.createInstance();
+signalHelper.send(new SignalCode("infor:getPerson"), signalData);
+signalHelper.send(new SignalCode("infor:getAddress"), signalData);' #txt
 ce0 f3 type Solution.callServiceData #txt
-ce0 f3 signalCode a #txt
-ce0 f3 attachToBusinessCase true #txt
 ce0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>a</name>
-        <nameStyle>1,5,7
+        <name>trigger singal</name>
+        <nameStyle>14,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-ce0 f3 113 233 30 30 -3 17 #rect
-ce0 f3 @|SignalStartEventIcon #fIcon
-ce0 f5 expr out #txt
-ce0 f5 312 96 393 96 #arcP
-ce0 f6 type Solution.callServiceData #txt
-ce0 f6 401 233 30 30 0 15 #rect
-ce0 f6 @|EndIcon #fIcon
+ce0 f3 142 90 112 44 -36 -8 #rect
+ce0 f3 @|StepIcon #fIcon
+ce0 f6 expr out #txt
+ce0 f6 254 112 302 112 #arcP
+ce0 f2 expr out #txt
+ce0 f2 95 112 142 112 #arcP
+ce0 f4 expr out #txt
+ce0 f4 414 112 593 112 #arcP
+ce0 f10 type Solution.callServiceData #txt
+ce0 f10 355 346 30 30 0 15 #rect
+ce0 f10 @|EndIcon #fIcon
+ce0 f13 actionDecl 'Solution.callServiceData out;
+' #txt
+ce0 f13 actionTable 'out=in;
+' #txt
+ce0 f13 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+import com.axonactive.workshop.backend.concurrency.rest.Person;
+import com.axonactive.workshop.backend.concurrency.rest.RestClient;
+
+Person person = RestClient.getInstance().getPersonById(in.personId);
+
+SynThreadManager.getQueue(in.queueId).put(person);' #txt
+ce0 f13 security system #txt
+ce0 f13 type Solution.callServiceData #txt
+ce0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Call get person service</name>
+        <nameStyle>23,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ce0 f13 138 243 144 44 -63 -8 #rect
+ce0 f13 @|StepIcon #fIcon
+ce0 f8 actionDecl 'Solution.callServiceData out;
+' #txt
+ce0 f8 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SignalTranferData;
+import com.axonactive.workshop.backend.SignalTransferHelper;
+SignalTranferData signalData = SignalTransferHelper.createInstance().toSignalData(signal.getSignalData() as String, SignalTranferData.class) as SignalTranferData;
+out.personId = signalData.id;
+out.queueId = signalData.queueId;
+' #txt
+ce0 f8 type Solution.callServiceData #txt
+ce0 f8 signalCode infor:getAddress #txt
+ce0 f8 attachToBusinessCase true #txt
+ce0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>infor:getAddress</name>
+        <nameStyle>16,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ce0 f8 67 346 30 30 -45 17 #rect
+ce0 f8 @|SignalStartEventIcon #fIcon
+ce0 f9 type Solution.callServiceData #txt
+ce0 f9 355 250 30 30 0 15 #rect
+ce0 f9 @|EndIcon #fIcon
+ce0 f7 actionDecl 'Solution.callServiceData out;
+' #txt
+ce0 f7 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SignalTranferData;
+import com.axonactive.workshop.backend.SignalTransferHelper;
+SignalTranferData signalData = SignalTransferHelper.createInstance().toSignalData(signal.getSignalData() as String, SignalTranferData.class) as SignalTranferData;
+out.personId = signalData.id;
+out.queueId = signalData.queueId;
+' #txt
 ce0 f7 type Solution.callServiceData #txt
-ce0 f7 497 377 30 30 0 15 #rect
-ce0 f7 @|EndIcon #fIcon
+ce0 f7 signalCode infor:getPerson #txt
+ce0 f7 attachToBusinessCase true #txt
+ce0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>infor:getPerson</name>
+        <nameStyle>15,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ce0 f7 67 250 30 30 -42 17 #rect
+ce0 f7 @|SignalStartEventIcon #fIcon
 ce0 f15 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f15 actionTable 'out=in;
 ' #txt
-ce0 f15 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.CountdownService;
+ce0 f15 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+import com.axonactive.workshop.backend.concurrency.rest.Address;
+import com.axonactive.workshop.backend.concurrency.rest.Person;
 import com.axonactive.workshop.backend.concurrency.rest.RestClient;
-in.person = RestClient.getInstance().getPersonById(0);
-CountdownService.get(in.id).countDown();' #txt
-ce0 f15 security system #txt
+
+Address address = RestClient.getInstance().getAddressById(in.personId);
+
+SynThreadManager.getQueue(in.queueId).put(address);' #txt
 ce0 f15 type Solution.callServiceData #txt
-ce0 f15 189 226 112 44 0 -8 #rect
+ce0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Call get address service</name>
+        <nameStyle>24,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ce0 f15 138 339 144 44 -66 -8 #rect
 ce0 f15 @|StepIcon #fIcon
-ce0 f2 143 248 189 248 #arcP
-ce0 f14 actionDecl 'Solution.callServiceData out;
-' #txt
-ce0 f14 actionTable 'out=in;
-' #txt
-ce0 f14 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.CountdownService;
-import com.axonactive.workshop.backend.concurrency.rest.RestClient;
-RestClient.getInstance().getPersonById(1);
-CountdownService.get(in.id).countDown();' #txt
-ce0 f14 type Solution.callServiceData #txt
-ce0 f14 243 370 112 44 0 -8 #rect
-ce0 f14 @|StepIcon #fIcon
-ce0 f8 143 392 243 392 #arcP
-ce0 f13 clientId 6649babd-2696-4946-98e4-04b979cea200 #txt
-ce0 f13 path 1 #txt
-ce0 f13 584 74 112 44 0 -8 #rect
-ce0 f13 @|RestClientCallIcon #fIcon
-ce0 f16 clientId 6649babd-2696-4946-98e4-04b979cea200 #txt
-ce0 f16 path 0 #txt
-ce0 f16 616 186 112 44 0 -8 #rect
-ce0 f16 @|RestClientCallIcon #fIcon
-ce0 f17 actionDecl 'Solution.callServiceData out1;
-Solution.callServiceData out2;
-' #txt
-ce0 f17 actionTable 'out1=in;
-' #txt
-ce0 f17 type Solution.callServiceData #txt
-ce0 f17 464 144 32 32 0 16 #rect
-ce0 f17 @|ThreadIcon #fIcon
-ce0 f18 actionDecl 'Solution.callServiceData out;
-' #txt
-ce0 f18 actionTable 'out=in1;
-' #txt
-ce0 f18 816 128 32 32 0 16 #rect
-ce0 f18 @|JoinIcon #fIcon
-ce0 f10 expr out1 #txt
-ce0 f10 491 155 585 118 #arcP
-ce0 f20 expr out2 #txt
-ce0 f20 493 163 616 208 #arcP
-ce0 f21 type Solution.callServiceData #txt
-ce0 f21 var in1 #txt
-ce0 f21 696 96 819 141 #arcP
-ce0 f22 type Solution.callServiceData #txt
-ce0 f22 var in2 #txt
-ce0 f22 727 186 821 149 #arcP
-ce0 f23 expr out #txt
-ce0 f23 832 128 422 90 #arcP
-ce0 f23 1 832 96 #addKink
-ce0 f23 2 584 32 #addKink
-ce0 f23 1 0.7726397481423342 0 0 #arcLabel
-ce0 f24 expr out #txt
-ce0 f24 111 48 256 74 #arcP
-ce0 f24 1 248 48 #addKink
-ce0 f24 0 0.6834234295346809 0 0 #arcLabel
+ce0 f14 expr out #txt
+ce0 f14 97 265 138 265 #arcP
 ce0 f11 expr out #txt
-ce0 f11 286 270 498 384 #arcP
+ce0 f11 282 265 355 265 #arcP
+ce0 f16 expr out #txt
+ce0 f16 97 361 138 361 #arcP
 ce0 f12 expr out #txt
-ce0 f12 355 392 497 392 #arcP
+ce0 f12 282 361 355 361 #arcP
 >Proto ce0 .type Solution.callServiceData #txt
 >Proto ce0 .processKind CALLABLE_SUB #txt
 >Proto ce0 0 0 32 24 18 0 #rect
 >Proto ce0 @|BIcon #fIcon
-ce0 f9 mainOut f5 tail #connect
-ce0 f5 head f1 mainIn #connect
-ce0 f3 mainOut f2 tail #connect
-ce0 f2 head f15 mainIn #connect
-ce0 f4 mainOut f8 tail #connect
-ce0 f8 head f14 mainIn #connect
-ce0 f17 out f10 tail #connect
-ce0 f10 head f13 mainIn #connect
-ce0 f17 out f20 tail #connect
-ce0 f20 head f16 mainIn #connect
-ce0 f13 mainOut f21 tail #connect
-ce0 f21 head f18 in #connect
-ce0 f16 mainOut f22 tail #connect
-ce0 f22 head f18 in #connect
-ce0 f18 mainOut f23 tail #connect
-ce0 f23 head f1 mainIn #connect
-ce0 f0 mainOut f24 tail #connect
-ce0 f24 head f9 mainIn #connect
-ce0 f15 mainOut f11 tail #connect
-ce0 f11 head f7 mainIn #connect
-ce0 f14 mainOut f12 tail #connect
-ce0 f12 head f7 mainIn #connect
+ce0 f3 mainOut f6 tail #connect
+ce0 f6 head f5 mainIn #connect
+ce0 f0 mainOut f2 tail #connect
+ce0 f2 head f3 mainIn #connect
+ce0 f5 mainOut f4 tail #connect
+ce0 f4 head f1 mainIn #connect
+ce0 f7 mainOut f14 tail #connect
+ce0 f14 head f13 mainIn #connect
+ce0 f13 mainOut f11 tail #connect
+ce0 f11 head f9 mainIn #connect
+ce0 f8 mainOut f16 tail #connect
+ce0 f16 head f15 mainIn #connect
+ce0 f15 mainOut f12 tail #connect
+ce0 f12 head f10 mainIn #connect

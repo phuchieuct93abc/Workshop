@@ -7,26 +7,26 @@ package com.axonactive.workshop.solution.backend.MultiThread;
 public class MultiThreadData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -5732438233621087290L;
+  private static final long serialVersionUID = 7607112412755692138L;
 
-  private com.axonactive.workshop.backend.concurrency.rest.Person person;
+  private com.axonactive.workshop.backend.concurrency.rest.PersonalInformation personalInformation;
 
   /**
-   * Gets the field person.
-   * @return the value of the field person; may be null.
+   * Gets the field personalInformation.
+   * @return the value of the field personalInformation; may be null.
    */
-  public com.axonactive.workshop.backend.concurrency.rest.Person getPerson()
+  public com.axonactive.workshop.backend.concurrency.rest.PersonalInformation getPersonalInformation()
   {
-    return person;
+    return personalInformation;
   }
 
   /**
-   * Sets the field person.
-   * @param _person the new value of the field person.
+   * Sets the field personalInformation.
+   * @param _personalInformation the new value of the field personalInformation.
    */
-  public void setPerson(com.axonactive.workshop.backend.concurrency.rest.Person _person)
+  public void setPersonalInformation(com.axonactive.workshop.backend.concurrency.rest.PersonalInformation _personalInformation)
   {
-    person = _person;
+    personalInformation = _personalInformation;
   }
 
   private java.lang.Long totalTime;
@@ -47,6 +47,46 @@ public class MultiThreadData extends ch.ivyteam.ivy.scripting.objects.CompositeO
   public void setTotalTime(java.lang.Long _totalTime)
   {
     totalTime = _totalTime;
+  }
+
+  private java.util.List<java.lang.String> personIds;
+
+  /**
+   * Gets the field personIds.
+   * @return the value of the field personIds; may be null.
+   */
+  public java.util.List<java.lang.String> getPersonIds()
+  {
+    return personIds;
+  }
+
+  /**
+   * Sets the field personIds.
+   * @param _personIds the new value of the field personIds.
+   */
+  public void setPersonIds(java.util.List<java.lang.String> _personIds)
+  {
+    personIds = _personIds;
+  }
+
+  private java.lang.String selectedId;
+
+  /**
+   * Gets the field selectedId.
+   * @return the value of the field selectedId; may be null.
+   */
+  public java.lang.String getSelectedId()
+  {
+    return selectedId;
+  }
+
+  /**
+   * Sets the field selectedId.
+   * @param _selectedId the new value of the field selectedId.
+   */
+  public void setSelectedId(java.lang.String _selectedId)
+  {
+    selectedId = _selectedId;
   }
 
 }

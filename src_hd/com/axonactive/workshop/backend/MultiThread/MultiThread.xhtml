@@ -10,18 +10,33 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">MultiThread</ui:define>
 		<ui:define name="content">
-		<h:form id="form">
-			<p:outputPanel>
-				<p:outputLabel value="PersonInfor"></p:outputLabel>
-				<p:outputLabel value="#{data.person.toString()}"></p:outputLabel>
-			</p:outputPanel>
-			<p:outputPanel>
-				<p:outputLabel value="Executed Time: "></p:outputLabel>
-				<p:outputLabel value="#{data.totalTime} ms"></p:outputLabel>
-			</p:outputPanel>
+			<h:form id="form">
 			
-			<p:commandButton actionListener="#{logic.callService}" value="Call Service"></p:commandButton>
-		</h:form>
+				<p:outputPanel>
+					<p:outputLabel value="Id: "></p:outputLabel>
+					<p:selectOneMenu id="personId" value="#{data.selectedId}">
+						<f:selectItem itemLabel="Select One" itemValue="" />
+						<f:selectItems value="#{data.personIds}" />
+					</p:selectOneMenu>
+				</p:outputPanel>
+			
+				<p:outputPanel>
+					<p:outputLabel value="Person: "></p:outputLabel>
+					<p:outputLabel value="#{data.personalInformation.person.toString()}"></p:outputLabel>
+				</p:outputPanel>
+				
+				<p:outputPanel>
+					<p:outputLabel value="Address: "></p:outputLabel>
+					<p:outputLabel value="#{data.personalInformation.address.toString()}"></p:outputLabel>
+				</p:outputPanel>
+				<p:outputPanel>
+					<p:outputLabel value="Executed Time: "></p:outputLabel>
+					<p:outputLabel value="#{data.totalTime} ms"></p:outputLabel>
+				</p:outputPanel>
+
+				<p:commandButton actionListener="#{logic.callService}"
+					value="Call Service"></p:commandButton>
+			</h:form>
 		</ui:define>
 	</ui:composition>
 </h:body>

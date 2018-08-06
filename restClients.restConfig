@@ -4,7 +4,7 @@
         <uuid>6649babd-2696-4946-98e4-04b979cea200</uuid>
         <name>restService</name>
         <configuration>
-            <uri>http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.engine.context}/api/{ivy.request.application}/getPersons</uri>
+            <uri>http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.engine.context}/api/{ivy.request.application}/getInfor</uri>
             <property>
                 <name>JSON.Deserialization.FAIL_ON_UNKNOWN_PROPERTIES</name>
                 <value>false</value>

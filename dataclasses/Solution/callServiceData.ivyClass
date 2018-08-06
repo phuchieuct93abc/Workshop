@@ -1,10 +1,8 @@
 callServiceData #class
 Solution #namespace
-person com.axonactive.workshop.backend.concurrency.rest.Person #field
-person PERSISTENT #fieldModifier
-countdown java.util.concurrent.CountDownLatch #field
-countdown PERSISTENT #fieldModifier
-countdown1 java.util.concurrent.CountDownLatch #field
-countdown1 PERSISTENT #fieldModifier
-id String #field
-id PERSISTENT #fieldModifier
+queueId String #field
+queueId PERSISTENT #fieldModifier
+result com.axonactive.workshop.backend.concurrency.rest.PersonalInformation #field
+result PERSISTENT #fieldModifier
+personId String #field
+personId PERSISTENT #fieldModifier

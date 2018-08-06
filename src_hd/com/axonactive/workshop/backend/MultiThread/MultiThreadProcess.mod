@@ -20,11 +20,17 @@ Ms0 @RichDialogEnd f4 '' #zField
 Ms0 @PushWFArc f5 '' #zField
 Ms0 @RichDialogMethodStart f11 '' #zField
 Ms0 @GridStep f6 '' #zField
-Ms0 @PushWFArc f7 '' #zField
-Ms0 @PushWFArc f10 '' #zField
 Ms0 @RichDialogProcessEnd f1 '' #zField
 Ms0 @RichDialogProcessEnd f2 '' #zField
+Ms0 @GridStep f9 '' #zField
+Ms0 @PushWFArc f12 '' #zField
+Ms0 @PushWFArc f7 '' #zField
+Ms0 @GridStep f15 '' #zField
+Ms0 @PushWFArc f16 '' #zField
 Ms0 @PushWFArc f8 '' #zField
+Ms0 @GridStep f17 '' #zField
+Ms0 @PushWFArc f10 '' #zField
+Ms0 @PushWFArc f13 '' #zField
 >Proto Ms0 Ms0 MultiThreadProcess #zField
 Ms0 f0 guid 164D120CF65666A8 #txt
 Ms0 f0 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
@@ -77,57 +83,135 @@ Ms0 f11 outParameterDecl '<> result;
 Ms0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>callService1()</name>
-        <nameStyle>14,5,7
+        <name>callService()</name>
+        <nameStyle>13,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Ms0 f11 91 291 26 26 -37 15 #rect
+Ms0 f11 91 291 26 26 -33 15 #rect
 Ms0 f11 @|RichDialogMethodStartIcon #fIcon
 Ms0 f6 actionDecl 'com.axonactive.workshop.backend.MultiThread.MultiThreadData out;
 ' #txt
 Ms0 f6 actionTable 'out=in;
 ' #txt
-Ms0 f6 actionCode 'import javax.faces.context.FacesContext;
+Ms0 f6 actionCode 'import com.axonactive.workshop.backend.concurrency.rest.Address;
+import com.axonactive.workshop.backend.concurrency.rest.Person;
+import javax.faces.context.FacesContext;
 import com.axonactive.workshop.backend.UIComponentUtils;
 import org.primefaces.context.RequestContext;
-
 import com.axonactive.workshop.backend.concurrency.rest.RestClient;
-in.totalTime = System.currentTimeMillis();
-in.person = RestClient.getInstance().getPersonById(0);
-RestClient.getInstance().getPersonById(1);
 
-in.totalTime = System.currentTimeMillis() - in.totalTime;
-ivy.log.fatal(in.totalTime);
+in.personalInformation.person = RestClient.getInstance().getPersonById(in.selectedId);
+in.personalInformation.address =  RestClient.getInstance().getAddressById(in.selectedId);
 
 RequestContext.getCurrentInstance().update(UIComponentUtils.getFullId("form",FacesContext.getCurrentInstance()));
+
+
 ' #txt
 Ms0 f6 security system #txt
 Ms0 f6 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
-Ms0 f6 175 280 112 44 0 -8 #rect
+Ms0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Map data from service</name>
+        <nameStyle>21,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ms0 f6 328 282 128 44 -60 -8 #rect
 Ms0 f6 @|StepIcon #fIcon
-Ms0 f7 expr out #txt
-Ms0 f7 116 303 175 302 #arcP
-Ms0 f10 expr out #txt
-Ms0 f10 109 64 339 64 #arcP
 Ms0 f1 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
 Ms0 f1 339 51 26 26 0 12 #rect
 Ms0 f1 @|RichDialogProcessEndIcon #fIcon
 Ms0 f2 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
-Ms0 f2 386 288 26 26 0 12 #rect
+Ms0 f2 667 291 26 26 0 12 #rect
 Ms0 f2 @|RichDialogProcessEndIcon #fIcon
+Ms0 f9 actionDecl 'com.axonactive.workshop.backend.MultiThread.MultiThreadData out;
+' #txt
+Ms0 f9 actionTable 'out=in;
+' #txt
+Ms0 f9 actionCode 'in.totalTime = System.currentTimeMillis();' #txt
+Ms0 f9 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
+Ms0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>init time counter</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ms0 f9 176 282 112 44 -43 -8 #rect
+Ms0 f9 @|StepIcon #fIcon
+Ms0 f12 expr out #txt
+Ms0 f12 117 304 176 304 #arcP
+Ms0 f7 expr out #txt
+Ms0 f7 288 304 328 304 #arcP
+Ms0 f15 actionDecl 'com.axonactive.workshop.backend.MultiThread.MultiThreadData out;
+' #txt
+Ms0 f15 actionTable 'out=in;
+' #txt
+Ms0 f15 actionCode 'in.totalTime = System.currentTimeMillis() - in.totalTime;' #txt
+Ms0 f15 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
+Ms0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>calculate executed time</name>
+        <nameStyle>23,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ms0 f15 480 282 144 44 -64 -8 #rect
+Ms0 f15 @|StepIcon #fIcon
+Ms0 f16 expr out #txt
+Ms0 f16 456 304 480 304 #arcP
 Ms0 f8 expr out #txt
-Ms0 f8 287 302 386 301 #arcP
+Ms0 f8 624 304 667 304 #arcP
+Ms0 f17 actionDecl 'com.axonactive.workshop.backend.MultiThread.MultiThreadData out;
+' #txt
+Ms0 f17 actionTable 'out=in;
+' #txt
+Ms0 f17 actionCode 'import java.util.ArrayList;
+import com.axonactive.workshop.backend.concurrency.rest.PersonalInformation;
+in.personalInformation = new PersonalInformation();
+
+in.personIds = new ArrayList ();
+in.personIds.add("0");
+in.personIds.add("1");' #txt
+Ms0 f17 type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
+Ms0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>init</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ms0 f17 154 41 112 44 -8 -8 #rect
+Ms0 f17 @|StepIcon #fIcon
+Ms0 f10 expr out #txt
+Ms0 f10 108 63 154 63 #arcP
+Ms0 f13 expr out #txt
+Ms0 f13 266 63 339 63 #arcP
 >Proto Ms0 .type com.axonactive.workshop.backend.MultiThread.MultiThreadData #txt
 >Proto Ms0 .processKind HTML_DIALOG #txt
 >Proto Ms0 -8 -8 16 16 16 26 #rect
 >Proto Ms0 '' #fIcon
 Ms0 f3 mainOut f5 tail #connect
 Ms0 f5 head f4 mainIn #connect
-Ms0 f0 mainOut f10 tail #connect
-Ms0 f10 head f1 mainIn #connect
-Ms0 f11 mainOut f7 tail #connect
+Ms0 f11 mainOut f12 tail #connect
+Ms0 f12 head f9 mainIn #connect
+Ms0 f9 mainOut f7 tail #connect
 Ms0 f7 head f6 mainIn #connect
-Ms0 f6 mainOut f8 tail #connect
+Ms0 f6 mainOut f16 tail #connect
+Ms0 f16 head f15 mainIn #connect
+Ms0 f15 mainOut f8 tail #connect
 Ms0 f8 head f2 mainIn #connect
+Ms0 f0 mainOut f10 tail #connect
+Ms0 f10 head f17 mainIn #connect
+Ms0 f17 mainOut f13 tail #connect
+Ms0 f13 head f1 mainIn #connect

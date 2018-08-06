@@ -8,16 +8,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @XmlRootElement(name = "person")
 public class Person {
-	private java.lang.Integer id;
+	private java.lang.String id;
 	private java.lang.String firstname;
 	private java.lang.String lastname;
 
 	@XmlElement
-	public java.lang.Integer getId() {
+	public java.lang.String getId() {
 		return id;
 	}
 
-	public void setId(java.lang.Integer id) {
+	public void setId(java.lang.String id) {
 		this.id = id;
 	}
 
