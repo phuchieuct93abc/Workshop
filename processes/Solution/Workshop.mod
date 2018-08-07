@@ -63,7 +63,7 @@ Wp0 f1 305 49 30 30 0 15 #rect
 Wp0 f1 @|EndIcon #fIcon
 Wp0 f2 targetWindow NEW #txt
 Wp0 f2 targetDisplay TOP #txt
-Wp0 f2 richDialogId com.axonactive.workshop.solution.backend.Concurrency #txt
+Wp0 f2 richDialogId com.axonactive.workshop.component.backend.solution.Concurrency #txt
 Wp0 f2 startMethod start() #txt
 Wp0 f2 type com.axonactive.workshop.Data #txt
 Wp0 f2 requestActionDecl '<> param;' #txt
@@ -115,7 +115,7 @@ Wp0 f6 305 177 30 30 0 15 #rect
 Wp0 f6 @|EndIcon #fIcon
 Wp0 f7 targetWindow NEW #txt
 Wp0 f7 targetDisplay TOP #txt
-Wp0 f7 richDialogId com.axonactive.workshop.solution.backend.MultiThread #txt
+Wp0 f7 richDialogId com.axonactive.workshop.component.backend.solution.MultiThread #txt
 Wp0 f7 startMethod start() #txt
 Wp0 f7 type com.axonactive.workshop.Data #txt
 Wp0 f7 requestActionDecl '<> param;' #txt
@@ -164,7 +164,7 @@ Wp0 f10 81 305 30 30 -41 17 #rect
 Wp0 f10 @|StartRequestIcon #fIcon
 Wp0 f11 targetWindow NEW #txt
 Wp0 f11 targetDisplay TOP #txt
-Wp0 f11 richDialogId com.axonactive.workshop.solution.backend.RenderBlocking #txt
+Wp0 f11 richDialogId com.axonactive.workshop.component.backend.solution.RenderBlocking #txt
 Wp0 f11 startMethod start() #txt
 Wp0 f11 type com.axonactive.workshop.Data #txt
 Wp0 f11 requestActionDecl '<> param;' #txt
