@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="css">
+			<h:outputStylesheet library="ivy-webcontent" name="/resources/css/fintech-theme-main.css" />
+			<h:outputStylesheet library="ivy-webcontent" name="/resources/css/fintech-theme-new.css" />
+			<h:outputStylesheet library="ivy-webcontent" name="/resources/css/standard-theme-new.css" />
+			<h:outputStylesheet library="ivy-webcontent" name="/resources/css/standard-theme.css.css" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.slim.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.inputmask.bundle.js" />
+			<h:outputStylesheet library="ivy-webcontent" name="/resources/css/font-awesome.css" />
+			<h:outputStylesheet library="ivy-webcontent" name="/resources/css/portal.css" />
+		</ui:define>
+		<ui:define name="JSatTop">
+			<h:outputScript library="ivy-webcontent" name="/resources/js/angular.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/inputmask.bundle.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/intlTelInput-utils.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.slim.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.inputmask.bundle.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/libphonenumber.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/moment.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/perfect-scrollbar.js" />
+		</ui:define>
+			
+		<ui:define name="title">FrontEnd Issue</ui:define>
+		
+		<ui:define name="content">
+			<h3>This is a tittle</h3>
+			<h:form id="form">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
