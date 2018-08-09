@@ -1,0 +1,4 @@
+CategoriesData #class
+com.axonactive.workshop.dialog.Categories #namespace
+cacheProcess com.axonactive.workshop.CacheProcess #field
+cacheProcess PERSISTENT #fieldModifier

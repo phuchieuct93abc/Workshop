@@ -1,0 +1,4 @@
+CacheProcess #class
+com.axonactive.workshop #namespace
+items List<String> #field
+items PERSISTENT #fieldModifier
