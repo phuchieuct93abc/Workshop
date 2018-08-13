@@ -15,64 +15,40 @@
 			<h:outputStylesheet name="resources/css/standard-theme.css.css" />
 			<h:outputStylesheet name="resources/css/font-awesome.css" />
 			<h:outputStylesheet name="resources/css/portal.css" />
-			
-			<link rel="icon" type="image/png" href="favicon.ico" />
-	        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-	        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet"/>
-	        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
-	        
-	        <h:outputStylesheet name="resources/assets/css/slick.css"/>
-	        <h:outputStylesheet name="resources/assets/css/slick-theme.css"/>
-	        <h:outputStylesheet name="resources/assets/css/animate.css"/>
-	        <h:outputStylesheet name="resources/assets/css/fonticons.css"/>
-	        <h:outputStylesheet name="resources/assets/css/font-awesome.min.css"/>
-	        <h:outputStylesheet name="resources/assets/css/bootstrap.css"/>
-	        <h:outputStylesheet name="resources/assets/css/magnific-popup.css"/>
-	        <h:outputStylesheet name="resources/assets/css/bootsnav.css"/>
-	        <h:outputStylesheet name="resources/assets/css/plugins.css" />
-	        <h:outputStylesheet name="resources/assets/css/style.css"/>
-	        <h:outputStylesheet name="resources/assets/css/colors/maron.css" />
-	        <h:outputStylesheet name="resources/assets/css/responsive.css" />
+	        <h:outputStylesheet name="resources/css/slick.css"/>
+	        <h:outputStylesheet name="resources/css/slick-theme.css"/>
+	        <h:outputStylesheet name="resources/css/animate.css"/>
+	        <h:outputStylesheet name="resources/css/fonticons.css"/>
+	        <h:outputStylesheet name="resources/css/font-awesome.min.css"/>
+	        <h:outputStylesheet name="resources/css/bootstrap.css"/>
+	        <h:outputStylesheet name="resources/css/magnific-popup.css"/>
+	        <h:outputStylesheet name="resources/css/bootsnav.css"/>
+	        <h:outputStylesheet name="resources/css/plugins.css" />
+	        <h:outputStylesheet name="resources/css/style.css"/>
+	        <h:outputStylesheet name="resources/css/colors/maron.css" />
+	        <h:outputStylesheet name="resources/css/responsive.css" />
 		</ui:define>
 		<ui:define name="JSatTop">
-			<h:outputScript library="ivy-webcontent" name="/resources/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js"/>
 			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.slim.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.collapse.js" />
 			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.inputmask.bundle.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/angular.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.magnific-popup.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-1.11.2.min.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/plugins.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/modernizr-2.8.3-respond-1.4.2.min.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/main.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/bootstrap.min.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/perfect-scrollbar.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/gmaps.min.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/bootsnav.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/slick.min.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js" />
 			<h:outputScript library="ivy-webcontent" name="/resources/js/inputmask.bundle.js" />
 			<h:outputScript library="ivy-webcontent" name="/resources/js/intlTelInput-utils.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.slim.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.inputmask.bundle.js" />
 			<h:outputScript library="ivy-webcontent" name="/resources/js/libphonenumber.js" />
 			<h:outputScript library="ivy-webcontent" name="/resources/js/moment.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/perfect-scrollbar.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/assets/js/vendor/jquery-1.11.2.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/vendor/bootstrap.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/jquery.magnific-popup.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/jquery.easing.1.3.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/slick.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/jquery.collapse.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/bootsnav.js" />
-            <script src="http://maps.google.com/maps/api/js?key=AIzaSyD_tAQD36pKp9v4at5AnpGbvBUsLCOSJx8"></script>
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/gmaps.min.js" />
-            <script>                                       
-	            function showmap() {
-	                var mapOptions = {
-	                    zoom: 8,
-	                    scrollwheel: false,
-	                    center: new google.maps.LatLng(-34.397, 150.644),
-	                    mapTypeId: google.maps.MapTypeId.ROADMAP
-	                };
-	                var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-	                $('.mapheight').css('height', '350');
-	                $('.maps_text h3').hide();
-	            }
-            </script>
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/plugins.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/assets/js/main.js" />
+            <h:outputScript library="ivy-webcontent" name="/resources/js/angular.js" />
 		</ui:define>
 		<ui:define name="title">FrontEnd Issue</ui:define>
 		
@@ -107,17 +83,17 @@
 	                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-shopping-bag"></i><span class="badge">3</span></a>
 	                                <ul class="dropdown-menu cart-list">
 	                                    <li>
-	                                        <a href="#" class="photo"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/thumb01.jpg" /></a>
+	                                        <a href="#" class="photo"><h:graphicImage library="ivy-webcontent" name="resources/images/thumb01.jpg" /></a>
 	                                        <h6><a href="#">Delica omtantur </a></h6>
 	                                        <p class="m-top-10">2x - <span class="price">$99.99</span></p>
 	                                    </li>
 	                                    <li>
-	                                        <a href="#" class="photo"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/thumb01.jpg" /></a>
+	                                        <a href="#" class="photo"><h:graphicImage library="ivy-webcontent" name="resources/images/thumb01.jpg" /></a>
 	                                        <h6><a href="#">Delica omtantur </a></h6>
 	                                        <p class="m-top-10">2x - <span class="price">$99.99</span></p>
 	                                    </li>
 	                                    <li>
-	                                        <a href="#" class="photo"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/thumb01.jpg" /></a>
+	                                        <a href="#" class="photo"><h:graphicImage library="ivy-webcontent" name="resources/images/thumb01.jpg" /></a>
 	                                        <h6><a href="#">Delica omtantur </a></h6>
 	                                        <p class="m-top-10">2x - <span class="price">$99.99</span></p>
 	                                    </li>
@@ -135,8 +111,8 @@
 	                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars" />
 	                        </button>
 	                        <a class="navbar-brand" href="#brand">
-	                            <h:graphicImage library="ivy-webcontent" name="resources/assets/images/logo.png" class="logo logo-display m-top-10" />
-	                            <h:graphicImage library="ivy-webcontent" name="resources/assets/images/logo.jpg" class="logo logo-scrolled" />
+	                            <h:graphicImage library="ivy-webcontent" name="resources/images/logo.png" class="logo logo-display m-top-10" />
+	                            <h:graphicImage library="ivy-webcontent" name="resources/images/logo.jpg" class="logo logo-scrolled" />
 	                        </a>
                     	</div>
                     	<div class="collapse navbar-collapse" id="navbar-menu">
@@ -340,19 +316,19 @@
             	
             	<div class="featured_slider">
 	                <div>
-	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/fprojects/1.jpg" alt="" class="popup-img" /><h:link  onclick="resources/assets/images/fprojects/1.jpg" class="popup-img"></h:link></div>
+	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/images/fprojects/1.jpg" alt="" class="popup-img" /><h:link  onclick="resources/images/fprojects/1.jpg" class="popup-img"></h:link></div>
 	                </div>
 	                <div>
-	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/fprojects/2.jpg" alt="" class="popup-img" /><h:link  onclick="resources/assets/images/fprojects/2.jpg" class="popup-img"></h:link></div>
+	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/images/fprojects/2.jpg" alt="" class="popup-img" /><h:link  onclick="resources/images/fprojects/2.jpg" class="popup-img"></h:link></div>
 	                </div>
 	                <div>
-	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/fprojects/3.jpg" alt="" class="popup-img" /><h:link  onclick="resources/assets/images/fprojects/3.jpg" class="popup-img"></h:link></div>
+	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/images/fprojects/3.jpg" alt="" class="popup-img" /><h:link  onclick="resources/images/fprojects/3.jpg" class="popup-img"></h:link></div>
 	                </div>
 	                <div>
-	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/fprojects/4.jpg" alt="" class="popup-img" /><h:link  onclick="resources/assets/images/fprojects/4.jpg" class="popup-img"></h:link></div>
+	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/images/fprojects/4.jpg" alt="" class="popup-img" /><h:link  onclick="resources/images/fprojects/4.jpg" class="popup-img"></h:link></div>
 	                </div>
 	                <div>
-	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/assets/images/fprojects/5.jpg" alt="" class="popup-img" /><h:link  onclick="resources/assets/images/fprojects/5.jpg" class="popup-img"></h:link></div>
+	                    <div class="featured_img"><h:graphicImage library="ivy-webcontent" name="resources/images/fprojects/5.jpg" alt="" class="popup-img" /><h:link  onclick="resources/images/fprojects/5.jpg" class="popup-img"></h:link></div>
 	                </div>
 	            </div>
 	            
@@ -441,12 +417,12 @@
 	                                    <div class="row">
 	                                        <div class="col-md-12">
 	                                            <div class="portfolio_item">
-	                                                <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Portfolio/2.jpg" alt=""/>
+	                                                <h:graphicImage library="ivy-webcontent" name="resources/images/Portfolio/2.jpg" alt=""/>
 	                                                <div class="portfolio_hover text-center">
 	                                                    <h6 class="text-uppercase text-white">Title</h6>
 	                                                    <p class=" text-white">Lorem ipsum dolor sit amet</p>
 	                                                    <div class="portfolio_hover_icon">
-	                                                    	<h:link onclick="resources/assets/images/Portfolio/2.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
+	                                                    	<h:link onclick="resources/images/Portfolio/2.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
 	                                                        <h:link onclick="" class="popup-img"><i class="fa fa-search"></i></h:link>
 	                                                    </div>
 	                                                </div>
@@ -454,12 +430,12 @@
 	                                        </div>
 	                                        <div class="col-md-6 m-top-30">
 	                                            <div class="portfolio_item portfolio_item2">
-	                                                <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Portfolio/3.jpg" alt=""/>
+	                                                <h:graphicImage library="ivy-webcontent" name="resources/images/Portfolio/3.jpg" alt=""/>
 	                                                <div class="portfolio_hover text-center">
 	                                                    <h6 class="text-uppercase text-white">Title</h6>
 	                                                    <p class=" text-white">Lorem ipsum dolor sit amet</p>
 	                                                    <div class="portfolio_hover_icon">
-	                                                   	 	<h:link onclick="resources/assets/images/Portfolio/3.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
+	                                                   	 	<h:link onclick="resources/images/Portfolio/3.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
 	                                                        <h:link onclick="" class="popup-img"><i class="fa fa-search"></i></h:link>
 	                                                    </div>
 	                                                </div>
@@ -467,12 +443,12 @@
 	                                        </div>
 	                                        <div class="col-md-6 m-top-30">
 	                                            <div class="portfolio_item portfolio_item2">
-	                                                <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Portfolio/5.jpg" alt=""/>
+	                                                <h:graphicImage library="ivy-webcontent" name="resources/images/Portfolio/5.jpg" alt=""/>
 	                                                <div class="portfolio_hover text-center">
 	                                                    <h6 class="text-uppercase text-white">Title</h6>
 	                                                    <p class=" text-white">Lorem ipsum dolor sit amet</p>
 	                                                    <div class="portfolio_hover_icon">
-	                                                        <h:link onclick="resources/assets/images/Portfolio/5.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
+	                                                        <h:link onclick="resources/images/Portfolio/5.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
 	                                                        <h:link onclick="" class="popup-img"><i class="fa fa-search"></i></h:link>
 	                                                    </div>
 	                                                </div>
@@ -483,12 +459,12 @@
 	
 	                                <div class="col-md-4">
 	                                    <div class="portfolio_item portfolio_item3 sm-m-top-30">
-	                                        <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Portfolio/1.jpg" alt=""/>
+	                                        <h:graphicImage library="ivy-webcontent" name="resources/images/Portfolio/1.jpg" alt=""/>
 	                                        <div class="portfolio_hover text-center">
 	                                            <h6 class="text-uppercase text-white">Title</h6>
 	                                            <p class=" text-white">Lorem ipsum dolor sit amet</p>
 	                                            <div class="portfolio_hover_icon">
-	                                                <h:link onclick="resources/assets/images/Portfolio/1.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
+	                                                <h:link onclick="resources/images/Portfolio/1.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
 													<h:link onclick="" class="popup-img"><i class="fa fa-search"></i></h:link>
 	                                            </div>
 	                                        </div>
@@ -496,12 +472,12 @@
 	                                </div>
 	                                <div class="col-md-4 m-top-30">
 	                                    <div class="portfolio_item portfolio_item2">
-	                                        <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Portfolio/6.jpg" alt=""/>
+	                                        <h:graphicImage library="ivy-webcontent" name="resources/images/Portfolio/6.jpg" alt=""/>
 	                                        <div class="portfolio_hover text-center">
 	                                            <h6 class="text-uppercase text-white">Title</h6>
 	                                            <p class=" text-white">Lorem ipsum dolor sit amet</p>
 	                                            <div class="portfolio_hover_icon">
-	                                                <h:link onclick="resources/assets/images/Portfolio/6.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
+	                                                <h:link onclick="resources/images/Portfolio/6.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
 													<h:link onclick="" class="popup-img"><i class="fa fa-search"></i></h:link>
 	                                            </div>
 	                                        </div>
@@ -509,12 +485,12 @@
 	                                </div>
 	                                <div class="col-md-8 m-top-30">
 	                                    <div class="portfolio_item">
-	                                        <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Portfolio/4.jpg" alt=""/>
+	                                        <h:graphicImage library="ivy-webcontent" name="resources/images/Portfolio/4.jpg" alt=""/>
 	                                        <div class="portfolio_hover text-center">
 	                                            <h6 class="text-uppercase text-white">Title</h6>
 	                                            <p class=" text-white">Lorem ipsum dolor sit amet</p>
 	                                            <div class="portfolio_hover_icon">
-	                                                <h:link onclick="resources/assets/images/Portfolio/4.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
+	                                                <h:link onclick="resources/images/Portfolio/4.jpg" class="popup-img"><i class="fa fa-expand"></i></h:link>
 													<h:link onclick="" class="popup-img"><i class="fa fa-search"></i></h:link>
 	                                            </div>
 	                                        </div>
@@ -794,32 +770,32 @@
 	                        <div class="main_cbrand text-center roomy-100">
 	                            <div class="col-md-2 col-sm-4 col-xs-6">
 	                                <div class="cbrand_item m-bottom-10">
-	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/assets/images/clients/1.jpg" alt=""/></h:link>
+	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/1.jpg" alt=""/></h:link>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 col-sm-4 col-xs-6">
 	                                <div class="cbrand_item m-bottom-10">
-	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/assets/images/clients/2.jpg" alt=""/></h:link>
+	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/2.jpg" alt=""/></h:link>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 col-sm-4 col-xs-6">
 	                                <div class="cbrand_item m-bottom-10">
-	                                   <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/assets/images/clients/5.jpg" alt=""/></h:link>
+	                                   <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/5.jpg" alt=""/></h:link>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 col-sm-4 col-xs-6">
 	                                <div class="cbrand_item m-bottom-10">
-	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/assets/images/clients/4.jpg" alt=""/></h:link>
+	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/4.jpg" alt=""/></h:link>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 col-sm-4 col-xs-6">
 	                                <div class="cbrand_item m-bottom-10">
-	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/assets/images/clients/3.jpg" alt=""/></h:link>
+	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/3.jpg" alt=""/></h:link>
 	                                </div>
 	                            </div>
 	                            <div class="col-md-2 col-sm-4 col-xs-6">
 	                                <div class="cbrand_item m-bottom-10">
-	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/assets/images/clients/1.jpg" alt=""/></h:link>
+	                                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/1.jpg" alt=""/></h:link>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -870,7 +846,7 @@
 	                            <div class="col-md-4">
 	                                <div class="blog_item m-top-20">
 	                                    <div class="blog_item_img">
-	                                        <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Blog/1.jpg" alt=""/>
+	                                        <h:graphicImage library="ivy-webcontent" name="resources/images/Blog/1.jpg" alt=""/>
 	                                    </div>
 	                                    <div class="blog_text roomy-40">
 	                                        <h6>PLEASUARE WITHOUT CONSCIENCE</h6>
@@ -881,7 +857,7 @@
 	                            <div class="col-md-4">
 	                                <div class="blog_item m-top-20">
 	                                    <div class="blog_item_img">
-	                                        <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Blog/2.jpg" alt=""/>
+	                                        <h:graphicImage library="ivy-webcontent" name="resources/images/Blog/2.jpg" alt=""/>
 	                                    </div>
 	                                    <div class="blog_text roomy-40">
 	                                        <h6>PLEASUARE WITHOUT CONSCIENCE</h6>
@@ -892,7 +868,7 @@
 	                            <div class="col-md-4">
 	                                <div class="blog_item m-top-20">
 	                                    <div class="blog_item_img">
-	                                        <h:graphicImage library="ivy-webcontent" name="resources/assets/images/Blog/3.jpg" alt=""/>
+	                                        <h:graphicImage library="ivy-webcontent" name="resources/images/Blog/3.jpg" alt=""/>
 	                                    </div>
 	                                    <div class="blog_text roomy-40">
 	                                        <h6>PLEASUARE WITHOUT CONSCIENCE</h6>
