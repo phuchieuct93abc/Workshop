@@ -17,8 +17,8 @@ public abstract class ParserJsonService {
 	
 	protected JsonArray getData(String path) throws FileNotFoundException, IOException {
 		JsonParser parser = new JsonParser();
-		JsonObject data2 = (JsonObject) parser.parse(new FileReader(new File(path)));
-		return (JsonArray) data2.get("people");
+		JsonObject data = (JsonObject) parser.parse(new FileReader(new File(path)));
+		return (JsonArray) data.get("people");
 	}
 	
 	protected static void performLogic() {
