@@ -74,7 +74,7 @@
                   <goal>copy-resources</goal>
                 </goals>
                 <configuration>
-                  <outputDirectory>${basedir}/webContent/resources/js</outputDirectory>
+                  <outputDirectory>${basedir}/webContent/resources/minify/js</outputDirectory>
                   <resources>
                     <resource>
                       <directory>${basedir}/target/resources/js</directory>
@@ -92,7 +92,7 @@
                   <goal>copy-resources</goal>
                 </goals>
                 <configuration>
-                  <outputDirectory>${basedir}/webContent/resources/css</outputDirectory>
+                  <outputDirectory>${basedir}/webContent/resources/minify/css</outputDirectory>
                   <resources>
                     <resource>
                       <directory>${basedir}/target/resources/css</directory>

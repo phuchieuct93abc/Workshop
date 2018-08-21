@@ -1,0 +1,5 @@
+@CHARSET "ISO-8859-1";
+
+.background-image-nham-thumb01 {
+  background-image: url("#{resource['resources/images/logo.jpg']}");
+}
