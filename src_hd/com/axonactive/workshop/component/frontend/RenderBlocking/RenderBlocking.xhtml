@@ -8,7 +8,56 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <h:body>
 	<ui:composition template="/layouts/basic.xhtml">
-		<ui:define name="headerCss">
+		<ui:define name="jsIssue">
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+			<h:outputScript library="ivy-webcontent" name="/resources/js/account-holder-relation.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/account-holder.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/add-ons-new.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/addOnsHandling.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/anchor-service.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/bootsnav.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/cob-script.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/credit-card-management.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/custom-scrollbar.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/dataChangedObserver.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/dataGathering.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/debit-card-management.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/documentFooter.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/dossier-overview.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/eventHandling.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/identity-verification.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/image-upload-component.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/input-enhancement.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/inputmask.bundle.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/intlTelInput-utils.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-blockUI.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.accordion.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.inputmask.bundle.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/libphonenumber.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/main.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/moment.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/navigator-scrollbar.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/onlineBankingUser.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/onlineBankingUserManagement.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/override-custom-scrollbar.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/overrideFintechHandlingComponent.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/perfect-scrollbar.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/phoneNumber.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/power-of-attorney-component.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/power-of-attorney-management.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/scan-services.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/signatureComponent.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/sob-script.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/task-description-handler.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/tax-residency-management.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/upload-scan-popup.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/upload-service.js" />
+			<h:outputScript library="ivy-webcontent" name="/resources/js/watch-changes.js" />
+		</ui:define>
+		<ui:define name="cssIssue">
 			<h:outputStylesheet name="resources/css/fintech-theme-main.css" />
 			<h:outputStylesheet name="resources/css/fintech-theme-new.css" />
 			<h:outputStylesheet name="resources/css/standard-theme-new.css" />
@@ -28,34 +77,12 @@
 	        <h:outputStylesheet name="resources/css/colors/maron.css" />
 	        <h:outputStylesheet name="resources/css/responsive.css" />
 		</ui:define>
-		<ui:define name="JSatTop">
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.js"/>
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-3.3.1.slim.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.collapse.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.inputmask.bundle.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery.magnific-popup.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/jquery-1.11.2.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/plugins.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/modernizr-2.8.3-respond-1.4.2.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/main.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/bootstrap.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/perfect-scrollbar.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/gmaps.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/bootsnav.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/slick.min.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/fintechHandlingComponent.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/inputmask.bundle.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/intlTelInput-utils.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/libphonenumber.js" />
-			<h:outputScript library="ivy-webcontent" name="/resources/js/moment.js" />
-            <h:outputScript library="ivy-webcontent" name="/resources/js/angular.js" />
-		</ui:define>
 		<ui:define name="title">FrontEnd Issue</ui:define>
 		
 		<ui:define name="content">
 		
 			<h3>This is a tittle</h3>
-			<div id="loading">
+			<!-- <div id="loading">
 	            <div id="loading-center">
 	                <div id="loading-center-absolute">
 	                    <div class="object" id="object_one"></div>
@@ -64,7 +91,7 @@
 	                    <div class="object" id="object_four"></div>
 	                </div>
 	            </div>
-	        </div>
+	        </div> -->
 	        <div class="culmn">
 				<nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
 					<div class="top-search">

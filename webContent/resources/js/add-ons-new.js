@@ -37,11 +37,11 @@ $(function(){
 	firstAddOnCockpit.find('.child-add-ons-container').show();
 		
 	$('.child-add-ons-container').outerHeight($('.add-ons').outerHeight() - $('.add-ons-title').outerHeight()*$('.add-ons-title').length);
-	Fintech.Cockpit.Accordion.apply({
+	/*Fintech.Cockpit.Accordion.apply({
 		container: '.child-add-ons',
 		title: '.add-ons-title',
 		content: '.child-add-ons-container'
-	});
+	});*/
 	
 	initFunctionClickLabelHandler();
 

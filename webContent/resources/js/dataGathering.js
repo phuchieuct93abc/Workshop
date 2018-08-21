@@ -634,10 +634,14 @@ Fintech.DataGathering.TabHelper = {
 		return true;
 	}
 }
+Fintech.DocumentComponent = Fintech.DataGathering || {};
 
-Fintech.DocumentComponent.storeInvalidTabs= function(storageField){
-	var invalidTabs = Fintech.DocumentComponent.collectInvalidTabs($("[id$='individualDgTab']"));
-	$("[id$='"+storageField+"']").val(invalidTabs);
+Fintech.DocumentComponent.storeInvalidTabs = {
+	alibabaVaBonmuoitencuop : function(anchors) {
+		var invalidTabs = Fintech.DocumentComponent.collectInvalidTabs($("[id$='individualDgTab']"));
+		$("[id$='"+storageField+"']").val(invalidTabs);
+	},
+	
 };
 
 Fintech.DocumentComponent.updateInvalidTabState = function (oldStatus){

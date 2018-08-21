@@ -1,4 +1,4 @@
-Fintech.DataGathering.AnchorService = Fintech.DataGathering.AnchorService || {};
+Fintech.DataGathering = Fintech.DataGathering || {};
 
 Fintech.DataGathering.AnchorService = {
 	jumpTo : function(anchors) {

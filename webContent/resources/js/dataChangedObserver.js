@@ -214,15 +214,12 @@ function DataChangedObserver(){
 		});
 		if(addNew) {
 			registerContainers[registerContainers.length] = opts.container;
-			$(opts.container).watchChanges(opts);
+			//$(opts.container).watchChanges(opts);
 		}
 		$.data($(opts.container)[0], 'options', opts);
 	}
 	
 }
-
-
-
 
 /*jquery function is using for watch container change*/
 (function ($) {

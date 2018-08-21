@@ -6,11 +6,9 @@
 jQuery(document).ready(function ($) {
 
 //for Preloader
-
-    $(window).load(function () {
-        $("#loading").fadeOut(500);
-    });
-
+	$(window).on('load', function() {
+		$("#loading").fadeOut(500);
+	});
 
     /*---------------------------------------------*
      * Mobile menu

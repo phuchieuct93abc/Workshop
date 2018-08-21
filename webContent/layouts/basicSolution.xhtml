@@ -9,10 +9,10 @@
 <h:head>
   <title><ui:insert name="title">Ivy Html Dialog</ui:insert></title>
   <link rel="shortcut icon" href="#{resource['ivy-webcontent:layouts/images/ivy_favicon_48.png']}" />
-  <ui:insert name="jsIssue" s/>
   <h:outputStylesheet name="layouts/styles/bootstrap-modified-for-jsf.css" />
   <h:outputStylesheet name="layouts/styles/bootstrap-reset.css" />
   <h:outputStylesheet name="layouts/styles/ivy-common-6.css" />
+  <ui:insert name="cssSolution" />
 </h:head>
 <h:body>
   <ui:insert name="header">
@@ -26,12 +26,10 @@
       </div>
     </div>
   </ui:insert>
-
   <div id="content" class="container">
     <ui:insert name="content">
         default content
-      </ui:insert>
-
+     </ui:insert>
     <ui:insert name="footer">
       <hr />
       <footer>
@@ -39,13 +37,10 @@
       </footer>
     </ui:insert>
   </div>
-  
-  <ui:insert name="cssIssue" />
-  
+  <ui:insert name="jsSolution" />
   <ui:insert name="exception">
     <ui:include src="/layouts/includes/exception.xhtml" />
   </ui:insert>
-  
+ 
 </h:body>
-<h:
 </html>
