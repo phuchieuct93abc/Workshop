@@ -114,7 +114,8 @@ Cs0 f13 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out
 ' #txt
 Cs0 f13 actionTable 'out=in;
 ' #txt
-Cs0 f13 actionCode 'import com.axonactive.workshop.CategoriesInitialization;
+Cs0 f13 actionCode 'import com.axonactive.workshop.cache.CategoriesInitialization;
+
 in.cacheProcess.needToReview= false;
 in.items = CategoriesInitialization.createInstance().loadCategories();' #txt
 Cs0 f13 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt

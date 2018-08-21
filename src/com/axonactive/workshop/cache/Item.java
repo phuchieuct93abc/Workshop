@@ -1,4 +1,4 @@
-package com.axonactive.workshop.model;
+package com.axonactive.workshop.cache;
 
 import com.opencsv.bean.CsvBindByName;
 

@@ -1,4 +1,4 @@
-package com.axonactive.workshop;
+package com.axonactive.workshop.cache;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -12,9 +12,6 @@ import org.apache.commons.collections4.CollectionUtils;
 
 import ch.ivyteam.ivy.environment.Ivy;
 
-import com.axonactive.workshop.cache.CacheService;
-import com.axonactive.workshop.cache.Constant;
-import com.axonactive.workshop.model.Item;
 import com.opencsv.bean.CsvToBeanBuilder;
 
 public class CategoriesInitialization {

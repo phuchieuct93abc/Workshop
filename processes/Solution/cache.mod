@@ -90,16 +90,6 @@ ce0 f5 actionDecl 'com.axonactive.workshop.CacheProcess out;
 ' #txt
 ce0 f5 actionTable 'out=in;
 ' #txt
-ce0 f5 actionCode 'import java.util.Arrays;
-import java.util.ArrayList;
-import com.axonactive.workshop.CategoriesInitialization;
-List<String> items = new ArrayList<String>();
-
-// items= CategoriesInitialization.createInstance().loadCategories();
-
-// in.items = new ArrayList<String>();
-// in.items.addAll(items);
-' #txt
 ce0 f5 type com.axonactive.workshop.CacheProcess #txt
 ce0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -202,7 +192,7 @@ ce0 f13 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ce0 f13 960 80 656 86 #arcP
 ce0 f13 1 960 280 #addKink
 ce0 f13 2 656 280 #addKink
-ce0 f13 1 0.4901315789473684 0 0 #arcLabel
+ce0 f13 1 0.4901315789473684 0 -13 #arcLabel
 >Proto ce0 .type com.axonactive.workshop.CacheProcess #txt
 >Proto ce0 .processKind NORMAL #txt
 >Proto ce0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
