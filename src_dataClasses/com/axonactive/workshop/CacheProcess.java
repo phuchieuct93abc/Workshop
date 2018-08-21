@@ -7,26 +7,46 @@ package com.axonactive.workshop;
 public class CacheProcess extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -7899237678141544512L;
+  private static final long serialVersionUID = 6843712038087023144L;
 
-  private ch.ivyteam.ivy.scripting.objects.List<java.lang.String> items;
+  private java.lang.String item;
 
   /**
-   * Gets the field items.
-   * @return the value of the field items; may be null.
+   * Gets the field item.
+   * @return the value of the field item; may be null.
    */
-  public ch.ivyteam.ivy.scripting.objects.List<java.lang.String> getItems()
+  public java.lang.String getItem()
   {
-    return items;
+    return item;
   }
 
   /**
-   * Sets the field items.
-   * @param _items the new value of the field items.
+   * Sets the field item.
+   * @param _item the new value of the field item.
    */
-  public void setItems(ch.ivyteam.ivy.scripting.objects.List<java.lang.String> _items)
+  public void setItem(java.lang.String _item)
   {
-    items = _items;
+    item = _item;
+  }
+
+  private java.lang.Boolean needToReview;
+
+  /**
+   * Gets the field needToReview.
+   * @return the value of the field needToReview; may be null.
+   */
+  public java.lang.Boolean getNeedToReview()
+  {
+    return needToReview;
+  }
+
+  /**
+   * Sets the field needToReview.
+   * @param _needToReview the new value of the field needToReview.
+   */
+  public void setNeedToReview(java.lang.Boolean _needToReview)
+  {
+    needToReview = _needToReview;
   }
 
 }

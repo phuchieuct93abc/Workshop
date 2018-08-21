@@ -7,11 +7,7 @@ public class Item {
 	@CsvBindByName(column = "Category")
 	private String category;
 
-	protected String getCategory() {
+	public String getCategory() {
 		return category;
-	}
-
-	protected void setCategory(String category) {
-		this.category = category;
 	}
 }

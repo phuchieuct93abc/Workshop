@@ -2,3 +2,9 @@ CategoriesData #class
 com.axonactive.workshop.dialog.Categories #namespace
 cacheProcess com.axonactive.workshop.CacheProcess #field
 cacheProcess PERSISTENT #fieldModifier
+categories List<String> #field
+categories PERSISTENT #fieldModifier
+products List<String> #field
+products PERSISTENT #fieldModifier
+items List<String> #field
+items PERSISTENT #fieldModifier

@@ -1,4 +1,6 @@
 CacheProcess #class
 com.axonactive.workshop #namespace
-items List<String> #field
-items PERSISTENT #fieldModifier
+item String #field
+item PERSISTENT #fieldModifier
+needToReview Boolean #field
+needToReview PERSISTENT #fieldModifier
