@@ -15,12 +15,9 @@ import ch.ivyteam.ivy.environment.Ivy;
 import com.axonactive.workshop.cache.CacheService;
 import com.axonactive.workshop.cache.Constant;
 import com.axonactive.workshop.model.Item;
-import com.axonactive.workshop.model.ProductItem;
 import com.opencsv.bean.CsvToBeanBuilder;
 
 public class CategoriesInitialization {
-	List<String> categories;
-	
 	private CategoriesInitialization() {
 		// Hide constructor
 	}
@@ -37,13 +34,7 @@ public class CategoriesInitialization {
 			items = loadContent(getUrl(), Item.class, skipLine);
 			CacheService.saveDataToCache(items, Constant.CACHE_CATEGORY_TYPES_IDENTIFIER);
 		}
-		return categories = items.stream().map(Item::getCategory).collect(Collectors.toList());
-	}
-	
-	public List<String> loadProducts(String category) {
-		int skipLine = 0;
-		List<ProductItem> items = loadContent(getProductUrl(category), ProductItem.class, skipLine);
-		return items.stream().map(ProductItem::getName).collect(Collectors.toList());
+		return items.stream().map(Item::getCategory).collect(Collectors.toList());
 	}
 	
 	public String getUrl() {
