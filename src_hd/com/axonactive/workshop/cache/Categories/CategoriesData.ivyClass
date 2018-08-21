@@ -1,6 +1,6 @@
 CategoriesData #class
-com.axonactive.workshop.dialog.Categories #namespace
-cacheProcess com.axonactive.workshop.CacheProcess #field
+com.axonactive.workshop.cache.Categories #namespace
+cacheProcess com.axonactive.workshop.cache.CacheProcess #field
 cacheProcess PERSISTENT #fieldModifier
 categories List<String> #field
 categories PERSISTENT #fieldModifier

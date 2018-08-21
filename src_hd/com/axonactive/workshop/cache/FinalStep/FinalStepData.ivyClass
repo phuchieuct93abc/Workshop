@@ -1,0 +1,4 @@
+FinalStepData #class
+com.axonactive.workshop.cache.FinalStep #namespace
+cacheProcess com.axonactive.workshop.cache.CacheProcess #field
+cacheProcess PERSISTENT #fieldModifier

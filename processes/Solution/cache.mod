@@ -28,9 +28,9 @@ ce0 @PushWFArc f12 '' #zField
 ce0 @PushWFArc f13 '' #zField
 >Proto ce0 ce0 cache #zField
 ce0 f0 outLink start.ivp #txt
-ce0 f0 type com.axonactive.workshop.CacheProcess #txt
+ce0 f0 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f0 inParamDecl '<> param;' #txt
-ce0 f0 actionDecl 'com.axonactive.workshop.CacheProcess out;
+ce0 f0 actionDecl 'com.axonactive.workshop.cache.CacheProcess out;
 ' #txt
 ce0 f0 guid 1651CE2FCB443263 #txt
 ce0 f0 requestEnabled true #txt
@@ -57,18 +57,16 @@ ce0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ce0 f0 @C|.responsibility Everybody #txt
 ce0 f0 81 49 30 30 -21 17 #rect
 ce0 f0 @|StartRequestIcon #fIcon
-ce0 f1 type com.axonactive.workshop.CacheProcess #txt
+ce0 f1 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f1 1065 49 30 30 0 15 #rect
 ce0 f1 @|EndIcon #fIcon
 ce0 f3 targetWindow NEW #txt
 ce0 f3 targetDisplay TOP #txt
-ce0 f3 richDialogId com.axonactive.workshop.dialog.Categories #txt
-ce0 f3 startMethod start(com.axonactive.workshop.CacheProcess) #txt
-ce0 f3 type com.axonactive.workshop.CacheProcess #txt
-ce0 f3 requestActionDecl '<com.axonactive.workshop.CacheProcess cacheProcess> param;' #txt
-ce0 f3 requestMappingAction 'param.cacheProcess=in;
-' #txt
-ce0 f3 responseActionDecl 'com.axonactive.workshop.CacheProcess out;
+ce0 f3 richDialogId com.axonactive.workshop.cache.Categories #txt
+ce0 f3 startMethod start(com.axonactive.workshop.cache.CacheProcess) #txt
+ce0 f3 type com.axonactive.workshop.cache.CacheProcess #txt
+ce0 f3 requestActionDecl '<com.axonactive.workshop.cache.CacheProcess cacheProcess> param;' #txt
+ce0 f3 responseActionDecl 'com.axonactive.workshop.cache.CacheProcess out;
 ' #txt
 ce0 f3 responseMappingAction 'out=in;
 ' #txt
@@ -86,11 +84,11 @@ ce0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 ce0 f3 600 42 112 44 -30 -8 #rect
 ce0 f3 @|RichDialogIcon #fIcon
-ce0 f5 actionDecl 'com.axonactive.workshop.CacheProcess out;
+ce0 f5 actionDecl 'com.axonactive.workshop.cache.CacheProcess out;
 ' #txt
 ce0 f5 actionTable 'out=in;
 ' #txt
-ce0 f5 type com.axonactive.workshop.CacheProcess #txt
+ce0 f5 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -104,12 +102,12 @@ ce0 f5 168 42 112 44 -40 -8 #rect
 ce0 f5 @|StepIcon #fIcon
 ce0 f6 expr out #txt
 ce0 f6 111 64 168 64 #arcP
-ce0 f7 actionDecl 'com.axonactive.workshop.CacheProcess out;
+ce0 f7 actionDecl 'com.axonactive.workshop.cache.CacheProcess out;
 ' #txt
 ce0 f7 actionTable 'out=in;
 ' #txt
 ce0 f7 actionCode '// ivy.log.fatal("Items: {0}", in.items.get(0));' #txt
-ce0 f7 type com.axonactive.workshop.CacheProcess #txt
+ce0 f7 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -127,13 +125,13 @@ ce0 f4 expr out #txt
 ce0 f4 440 64 600 64 #arcP
 ce0 f9 targetWindow NEW #txt
 ce0 f9 targetDisplay TOP #txt
-ce0 f9 richDialogId com.axonactive.workshop.FinalStep #txt
-ce0 f9 startMethod start(com.axonactive.workshop.CacheProcess) #txt
-ce0 f9 type com.axonactive.workshop.CacheProcess #txt
-ce0 f9 requestActionDecl '<com.axonactive.workshop.CacheProcess cacheProcess> param;' #txt
+ce0 f9 richDialogId com.axonactive.workshop.cache.FinalStep #txt
+ce0 f9 startMethod start(com.axonactive.workshop.cache.CacheProcess) #txt
+ce0 f9 type com.axonactive.workshop.cache.CacheProcess #txt
+ce0 f9 requestActionDecl '<com.axonactive.workshop.cache.CacheProcess cacheProcess> param;' #txt
 ce0 f9 requestMappingAction 'param.cacheProcess=in;
 ' #txt
-ce0 f9 responseActionDecl 'com.axonactive.workshop.CacheProcess out;
+ce0 f9 responseActionDecl 'com.axonactive.workshop.cache.CacheProcess out;
 ' #txt
 ce0 f9 responseMappingAction 'out=result.cacheProcess;
 ' #txt
@@ -153,7 +151,7 @@ ce0 f9 760 42 112 44 -27 -8 #rect
 ce0 f9 @|RichDialogIcon #fIcon
 ce0 f10 expr out #txt
 ce0 f10 712 64 760 64 #arcP
-ce0 f2 type com.axonactive.workshop.CacheProcess #txt
+ce0 f2 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -193,7 +191,7 @@ ce0 f13 960 80 656 86 #arcP
 ce0 f13 1 960 280 #addKink
 ce0 f13 2 656 280 #addKink
 ce0 f13 1 0.4901315789473684 0 -13 #arcLabel
->Proto ce0 .type com.axonactive.workshop.CacheProcess #txt
+>Proto ce0 .type com.axonactive.workshop.cache.CacheProcess #txt
 >Proto ce0 .processKind NORMAL #txt
 >Proto ce0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>

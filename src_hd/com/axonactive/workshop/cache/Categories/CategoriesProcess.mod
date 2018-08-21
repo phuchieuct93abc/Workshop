@@ -34,33 +34,33 @@ Cs0 @PushWFArc f19 '' #zField
 Cs0 @PushWFArc f2 '' #zField
 >Proto Cs0 Cs0 CategoriesProcess #zField
 Cs0 f0 guid 1651CE9E98113007 #txt
-Cs0 f0 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
-Cs0 f0 method start(com.axonactive.workshop.CacheProcess) #txt
+Cs0 f0 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
+Cs0 f0 method start(com.axonactive.workshop.cache.CacheProcess) #txt
 Cs0 f0 disableUIEvents true #txt
 Cs0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<com.axonactive.workshop.CacheProcess cacheProcess> param = methodEvent.getInputArguments();
+<> param = methodEvent.getInputArguments();
 ' #txt
 Cs0 f0 inParameterMapAction 'out.cacheProcess=param.cacheProcess;
 ' #txt
-Cs0 f0 outParameterDecl '<com.axonactive.workshop.CacheProcess cacheProcess> result;
-' #txt
-Cs0 f0 outParameterMapAction 'result.cacheProcess=in.cacheProcess;
+Cs0 f0 outParameterDecl '<> result;
 ' #txt
 Cs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>start(CacheProcess)</name>
+        <nameStyle>19,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Cs0 f0 83 51 26 26 -57 15 #rect
 Cs0 f0 @|RichDialogInitStartIcon #fIcon
-Cs0 f1 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f1 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f1 523 51 26 26 0 12 #rect
 Cs0 f1 @|RichDialogProcessEndIcon #fIcon
 Cs0 f3 guid 1651CE9E992C59FA #txt
-Cs0 f3 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
-Cs0 f3 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out;
+Cs0 f3 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
+Cs0 f3 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f3 actionTable 'out=in;
 ' #txt
@@ -73,15 +73,15 @@ Cs0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Cs0 f3 83 147 26 26 -15 12 #rect
 Cs0 f3 @|RichDialogProcessStartIcon #fIcon
-Cs0 f4 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f4 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f4 guid 1651CE9E99372B64 #txt
 Cs0 f4 211 147 26 26 0 12 #rect
 Cs0 f4 @|RichDialogEndIcon #fIcon
 Cs0 f5 expr out #txt
 Cs0 f5 109 160 211 160 #arcP
 Cs0 f8 guid 165322759319F86D #txt
-Cs0 f8 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
-Cs0 f8 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out;
+Cs0 f8 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
+Cs0 f8 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f8 actionTable 'out=in;
 ' #txt
@@ -96,21 +96,21 @@ Cs0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Cs0 f8 83 339 26 26 -43 15 #rect
 Cs0 f8 @|RichDialogProcessStartIcon #fIcon
-Cs0 f9 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f9 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f9 339 339 26 26 0 12 #rect
 Cs0 f9 @|RichDialogProcessEndIcon #fIcon
-Cs0 f11 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out;
+Cs0 f11 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f11 actionTable 'out=in;
 ' #txt
-Cs0 f11 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f11 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f11 168 330 112 44 0 -8 #rect
 Cs0 f11 @|StepIcon #fIcon
 Cs0 f12 expr out #txt
 Cs0 f12 109 352 168 352 #arcP
 Cs0 f10 expr out #txt
 Cs0 f10 280 352 339 352 #arcP
-Cs0 f13 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out;
+Cs0 f13 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f13 actionTable 'out=in;
 ' #txt
@@ -118,7 +118,7 @@ Cs0 f13 actionCode 'import com.axonactive.workshop.cache.CategoriesInitializatio
 
 in.cacheProcess.needToReview= false;
 in.items = CategoriesInitialization.createInstance().loadCategories();' #txt
-Cs0 f13 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f13 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -133,8 +133,8 @@ Cs0 f13 @|StepIcon #fIcon
 Cs0 f14 expr out #txt
 Cs0 f14 109 64 168 64 #arcP
 Cs0 f15 guid 16532D8CA13C4972 #txt
-Cs0 f15 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
-Cs0 f15 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out;
+Cs0 f15 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
+Cs0 f15 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f15 actionTable 'out=in;
 ' #txt
@@ -149,14 +149,14 @@ Cs0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Cs0 f15 67 531 26 26 -53 15 #rect
 Cs0 f15 @|RichDialogProcessStartIcon #fIcon
-Cs0 f16 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f16 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f16 395 531 26 26 0 12 #rect
 Cs0 f16 @|RichDialogProcessEndIcon #fIcon
-Cs0 f17 actionDecl 'com.axonactive.workshop.dialog.Categories.CategoriesData out;
+Cs0 f17 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f17 actionTable 'out=in;
 ' #txt
-Cs0 f17 type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+Cs0 f17 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 Cs0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -174,7 +174,7 @@ Cs0 f19 expr out #txt
 Cs0 f19 320 544 395 544 #arcP
 Cs0 f2 expr out #txt
 Cs0 f2 280 64 523 64 #arcP
->Proto Cs0 .type com.axonactive.workshop.dialog.Categories.CategoriesData #txt
+>Proto Cs0 .type com.axonactive.workshop.cache.Categories.CategoriesData #txt
 >Proto Cs0 .processKind HTML_DIALOG #txt
 >Proto Cs0 -8 -8 16 16 16 26 #rect
 >Proto Cs0 '' #fIcon

@@ -1,4 +1,4 @@
-package com.axonactive.workshop;
+package com.axonactive.workshop.cache;
 
 /**
  */

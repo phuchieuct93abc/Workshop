@@ -1,5 +1,5 @@
 CacheProcess #class
-com.axonactive.workshop #namespace
+com.axonactive.workshop.cache #namespace
 item String #field
 item PERSISTENT #fieldModifier
 needToReview Boolean #field

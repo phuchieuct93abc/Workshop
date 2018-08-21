@@ -1,4 +1,4 @@
-package com.axonactive.workshop.dialog.Categories;
+package com.axonactive.workshop.cache.Categories;
 
 /**
  */
@@ -7,15 +7,15 @@ package com.axonactive.workshop.dialog.Categories;
 public class CategoriesData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 4416759342159979117L;
+  private static final long serialVersionUID = 4746355905549132397L;
 
-  private com.axonactive.workshop.CacheProcess cacheProcess;
+  private com.axonactive.workshop.cache.CacheProcess cacheProcess;
 
   /**
    * Gets the field cacheProcess.
    * @return the value of the field cacheProcess; may be null.
    */
-  public com.axonactive.workshop.CacheProcess getCacheProcess()
+  public com.axonactive.workshop.cache.CacheProcess getCacheProcess()
   {
     return cacheProcess;
   }
@@ -24,7 +24,7 @@ public class CategoriesData extends ch.ivyteam.ivy.scripting.objects.CompositeOb
    * Sets the field cacheProcess.
    * @param _cacheProcess the new value of the field cacheProcess.
    */
-  public void setCacheProcess(com.axonactive.workshop.CacheProcess _cacheProcess)
+  public void setCacheProcess(com.axonactive.workshop.cache.CacheProcess _cacheProcess)
   {
     cacheProcess = _cacheProcess;
   }
