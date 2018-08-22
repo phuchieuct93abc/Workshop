@@ -38,14 +38,10 @@ public class CategoriesInitialization {
 		return String.join(Constant.FILE_SEPERATOR, Ivy.var().get(Constant.RESOURCE_CONFIG_GLOBAL_VARIABLE), Constant.CATEGORY_FILE_NAME);
 	}
 	
-	public String getProductUrl(String fileName) {
-		return String.join(Constant.FILE_SEPERATOR, Ivy.var().get(Constant.RESOURCE_CONFIG_GLOBAL_VARIABLE), fileName);
-	}
-	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-    public <T> List<T> loadContent(String csvPath, Class<T> clazz, int skipLines) {
+	private <T> List<T> loadContent(String csvPath, Class<T> clazz, int skipLines) {
 		try {
-			// This one simulates for heavy resource loading, do not delete
+			// This one simulates for heavy resource loading
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			Ivy.log().warn("Interupt by someone....", e);
@@ -56,6 +52,5 @@ public class CategoriesInitialization {
 			Ivy.log().error("Cannot read csv file.", e);
 		}
 		return Collections.emptyList();
-		
 	}
 }
