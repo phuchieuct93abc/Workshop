@@ -10,10 +10,9 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">Categories</ui:define>
 		<ui:define name="content">
-			<h3>
-			This is an <a href="http://developer.axonivy.com/doc/latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
-			</h3>
+			<h4>
+				Product Category Filling Step
+			</h4>
 			
 			<h:form id="form">
 				<h:panelGrid columns="1">
@@ -22,54 +21,18 @@
 					</f:facet>
 					<br />
 					
-					<!-- <p:tabView> -->
-											<!-- <p:ajax
-												event="tabChange"
-												listener="#{logic.onTabChanged}"
-												 /> -->
-<!-- 											<p:tab id="main-tab" title="Store S1">
-												<h:panelGroup >
-													<p:outputLabel value="Category" for="manCategory" />
-													<p:selectOneMenu id="manCategory" value="#{data.cacheProcess.items}" autoWidth="false">
-														<f:selectItem noSelectionOption="true" itemLabel="Please Select" itemValue="#{null}" />
-														<f:selectItems value="#{data.cacheProcess.items}" var="productCategory" itemValue="#{productCategory}" itemLabel="#{productCategory}" />
-													</p:selectOneMenu>
-													<br></br>
-													<p:outputLabel value="Note: " for="s1tab-note" />
-													<p:inputTextarea id="s1tab-note" placeholder="Put your note..."></p:inputTextarea>
-													
-													<p:outputLabel value="Product" for="manProduct" />
-													<p:selectOneMenu id="manProduct" value="#{data.products}" autoWidth="false">
-														<f:selectItem noSelectionOption="true" itemLabel="Please Select" itemValue="#{null}" />
-														<f:selectItems value="#{data.products}" var="product" itemValue="#{product}" itemLabel="#{product}" />
-													</p:selectOneMenu>
-													<br></br>
-												</h:panelGroup>
-											</p:tab> -->
-											
-											<!-- <p:tab id="woman-tab" title="Store S2">
-												<h:panelGroup >
-													<p:outputLabel value="Category" for="womanCategory" />
-													<p:selectOneMenu id="womanCategory" value="#{data.cacheProcess.items}" autoWidth="false">
-														<f:selectItem noSelectionOption="true" itemLabel="Please Select" itemValue="#{null}" />
-														<f:selectItems value="#{data.cacheProcess.items}" var="productCategory" itemValue="#{productCategory}" itemLabel="#{productCategory}" />
-													</p:selectOneMenu>
-													<br></br>
-													
-													<p:outputLabel value="Note: " for="s2tab-note" />
-													<p:inputTextarea id="s2tab-note" placeholder="Put your note..."></p:inputTextarea>
-												</h:panelGroup>
-											</p:tab> -->
-					<!-- </p:tabView> -->
-					
 					<h:panelGroup >
-								<p:outputLabel value="Category" for="productCategory" />
-								<p:selectOneMenu id="productCategory" value="#{data.cacheProcess.item}" autoWidth="false">
-									<f:selectItem noSelectionOption="true" itemLabel="Please Select" itemValue="#{null}" />
-									<f:selectItems value="#{data.items}" var="productCategory" itemValue="#{productCategory}" itemLabel="#{productCategory}" />
-								</p:selectOneMenu>
-								<br></br>
-								<p:inputTextarea id="note" placeholder="Put your note..."></p:inputTextarea>
+						<h:panelGrid columns="1">
+						<p:outputLabel value="Category" for="productCategory" />
+						<p:selectOneMenu id="productCategory" value="#{data.cacheProcess.item}" autoWidth="false">
+							<f:selectItem noSelectionOption="true" itemLabel="Please Select" itemValue="#{null}" />
+							<f:selectItems value="#{data.items}" var="productCategory" itemValue="#{productCategory}" itemLabel="#{productCategory}" />
+						</p:selectOneMenu>
+						
+ 						<br></br>
+						<p:outputLabel value="Note" for="note" />		
+						<p:inputTextarea id="note" placeholder="Add your note..."></p:inputTextarea>
+						</h:panelGrid>
 					</h:panelGroup>
 					<br />
 					

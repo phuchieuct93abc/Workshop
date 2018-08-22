@@ -10,22 +10,19 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">FinalStep</ui:define>
 		<ui:define name="content">
-			<h3>
-			This is an <a href="http://developer.axonivy.com/doc/latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
-			</h3>
-			
+			<h4>
+			 Confirmation Step
+			</h4>
+			<br></br>
 			<h:form id="form">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-					
-					<!-- No 'form field [List<String>]' template found for field 'cacheProcess.items'. -->
-					
-					<br />
-					<p:commandButton actionListener="#{logic.close}" value="Finished" update="form" icon="ui-icon-check" />
+					<h:panelGroup>
 					<p:commandButton actionListener="#{logic.back}" value="Back" update="form" icon="ui-icon-circle-arrow-w" />
+					<p:commandButton actionListener="#{logic.close}" value="Finish" update="form" icon="ui-icon-check" />
+					</h:panelGroup>
 				</h:panelGrid>
 			</h:form>
 			

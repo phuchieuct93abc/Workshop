@@ -17,15 +17,13 @@ ce0 @EndTask f1 '' #zField
 ce0 @RichDialog f3 '' #zField
 ce0 @GridStep f5 '' #zField
 ce0 @PushWFArc f6 '' #zField
-ce0 @GridStep f7 '' #zField
-ce0 @PushWFArc f8 '' #zField
-ce0 @PushWFArc f4 '' #zField
 ce0 @RichDialog f9 '' #zField
 ce0 @PushWFArc f10 '' #zField
 ce0 @Alternative f2 '' #zField
 ce0 @PushWFArc f11 '' #zField
 ce0 @PushWFArc f12 '' #zField
 ce0 @PushWFArc f13 '' #zField
+ce0 @PushWFArc f4 '' #zField
 >Proto ce0 ce0 cache #zField
 ce0 f0 outLink start.ivp #txt
 ce0 f0 type com.axonactive.workshop.cache.CacheProcess #txt
@@ -102,27 +100,6 @@ ce0 f5 168 42 112 44 -40 -8 #rect
 ce0 f5 @|StepIcon #fIcon
 ce0 f6 expr out #txt
 ce0 f6 111 64 168 64 #arcP
-ce0 f7 actionDecl 'com.axonactive.workshop.cache.CacheProcess out;
-' #txt
-ce0 f7 actionTable 'out=in;
-' #txt
-ce0 f7 actionCode '// ivy.log.fatal("Items: {0}", in.items.get(0));' #txt
-ce0 f7 type com.axonactive.workshop.cache.CacheProcess #txt
-ce0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Log</name>
-        <nameStyle>3,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-ce0 f7 328 42 112 44 -10 -8 #rect
-ce0 f7 @|StepIcon #fIcon
-ce0 f8 expr out #txt
-ce0 f8 280 64 328 64 #arcP
-ce0 f4 expr out #txt
-ce0 f4 440 64 600 64 #arcP
 ce0 f9 targetWindow NEW #txt
 ce0 f9 targetDisplay TOP #txt
 ce0 f9 richDialogId com.axonactive.workshop.cache.FinalStep #txt
@@ -191,6 +168,8 @@ ce0 f13 960 80 656 86 #arcP
 ce0 f13 1 960 280 #addKink
 ce0 f13 2 656 280 #addKink
 ce0 f13 1 0.4901315789473684 0 -13 #arcLabel
+ce0 f4 expr out #txt
+ce0 f4 280 64 600 64 #arcP
 >Proto ce0 .type com.axonactive.workshop.cache.CacheProcess #txt
 >Proto ce0 .processKind NORMAL #txt
 >Proto ce0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -202,10 +181,6 @@ ce0 f13 1 0.4901315789473684 0 -13 #arcLabel
 >Proto ce0 @|BIcon #fIcon
 ce0 f0 mainOut f6 tail #connect
 ce0 f6 head f5 mainIn #connect
-ce0 f5 mainOut f8 tail #connect
-ce0 f8 head f7 mainIn #connect
-ce0 f7 mainOut f4 tail #connect
-ce0 f4 head f3 mainIn #connect
 ce0 f3 mainOut f10 tail #connect
 ce0 f10 head f9 mainIn #connect
 ce0 f9 mainOut f11 tail #connect
@@ -214,3 +189,5 @@ ce0 f2 out f12 tail #connect
 ce0 f12 head f1 mainIn #connect
 ce0 f2 out f13 tail #connect
 ce0 f13 head f3 mainIn #connect
+ce0 f5 mainOut f4 tail #connect
+ce0 f4 head f3 mainIn #connect

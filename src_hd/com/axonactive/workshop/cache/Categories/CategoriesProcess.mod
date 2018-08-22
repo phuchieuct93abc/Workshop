@@ -19,18 +19,8 @@ Cs0 @RichDialogProcessEnd f1 '' #zField
 Cs0 @RichDialogProcessStart f3 '' #zField
 Cs0 @RichDialogEnd f4 '' #zField
 Cs0 @PushWFArc f5 '' #zField
-Cs0 @RichDialogProcessStart f8 '' #zField
-Cs0 @RichDialogProcessEnd f9 '' #zField
-Cs0 @GridStep f11 '' #zField
-Cs0 @PushWFArc f12 '' #zField
-Cs0 @PushWFArc f10 '' #zField
 Cs0 @GridStep f13 '' #zField
 Cs0 @PushWFArc f14 '' #zField
-Cs0 @RichDialogProcessStart f15 '' #zField
-Cs0 @RichDialogProcessEnd f16 '' #zField
-Cs0 @GridStep f17 '' #zField
-Cs0 @PushWFArc f18 '' #zField
-Cs0 @PushWFArc f19 '' #zField
 Cs0 @PushWFArc f2 '' #zField
 >Proto Cs0 Cs0 CategoriesProcess #zField
 Cs0 f0 guid 1651CE9E98113007 #txt
@@ -79,37 +69,6 @@ Cs0 f4 211 147 26 26 0 12 #rect
 Cs0 f4 @|RichDialogEndIcon #fIcon
 Cs0 f5 expr out #txt
 Cs0 f5 109 160 211 160 #arcP
-Cs0 f8 guid 165322759319F86D #txt
-Cs0 f8 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
-Cs0 f8 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
-' #txt
-Cs0 f8 actionTable 'out=in;
-' #txt
-Cs0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>onTabChanged</name>
-        <nameStyle>12,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Cs0 f8 83 339 26 26 -43 15 #rect
-Cs0 f8 @|RichDialogProcessStartIcon #fIcon
-Cs0 f9 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
-Cs0 f9 339 339 26 26 0 12 #rect
-Cs0 f9 @|RichDialogProcessEndIcon #fIcon
-Cs0 f11 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
-' #txt
-Cs0 f11 actionTable 'out=in;
-' #txt
-Cs0 f11 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
-Cs0 f11 168 330 112 44 0 -8 #rect
-Cs0 f11 @|StepIcon #fIcon
-Cs0 f12 expr out #txt
-Cs0 f12 109 352 168 352 #arcP
-Cs0 f10 expr out #txt
-Cs0 f10 280 352 339 352 #arcP
 Cs0 f13 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
 ' #txt
 Cs0 f13 actionTable 'out=in;
@@ -132,46 +91,6 @@ Cs0 f13 168 42 112 44 -21 -8 #rect
 Cs0 f13 @|StepIcon #fIcon
 Cs0 f14 expr out #txt
 Cs0 f14 109 64 168 64 #arcP
-Cs0 f15 guid 16532D8CA13C4972 #txt
-Cs0 f15 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
-Cs0 f15 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
-' #txt
-Cs0 f15 actionTable 'out=in;
-' #txt
-Cs0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>onCategoryChange</name>
-        <nameStyle>16,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Cs0 f15 67 531 26 26 -53 15 #rect
-Cs0 f15 @|RichDialogProcessStartIcon #fIcon
-Cs0 f16 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
-Cs0 f16 395 531 26 26 0 12 #rect
-Cs0 f16 @|RichDialogProcessEndIcon #fIcon
-Cs0 f17 actionDecl 'com.axonactive.workshop.cache.Categories.CategoriesData out;
-' #txt
-Cs0 f17 actionTable 'out=in;
-' #txt
-Cs0 f17 type com.axonactive.workshop.cache.Categories.CategoriesData #txt
-Cs0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Update Products</name>
-        <nameStyle>15,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Cs0 f17 208 522 112 44 -46 -8 #rect
-Cs0 f17 @|StepIcon #fIcon
-Cs0 f18 expr out #txt
-Cs0 f18 93 544 208 544 #arcP
-Cs0 f19 expr out #txt
-Cs0 f19 320 544 395 544 #arcP
 Cs0 f2 expr out #txt
 Cs0 f2 280 64 523 64 #arcP
 >Proto Cs0 .type com.axonactive.workshop.cache.Categories.CategoriesData #txt
@@ -180,15 +99,7 @@ Cs0 f2 280 64 523 64 #arcP
 >Proto Cs0 '' #fIcon
 Cs0 f3 mainOut f5 tail #connect
 Cs0 f5 head f4 mainIn #connect
-Cs0 f8 mainOut f12 tail #connect
-Cs0 f12 head f11 mainIn #connect
-Cs0 f11 mainOut f10 tail #connect
-Cs0 f10 head f9 mainIn #connect
 Cs0 f0 mainOut f14 tail #connect
 Cs0 f14 head f13 mainIn #connect
-Cs0 f15 mainOut f18 tail #connect
-Cs0 f18 head f17 mainIn #connect
-Cs0 f17 mainOut f19 tail #connect
-Cs0 f19 head f16 mainIn #connect
 Cs0 f13 mainOut f2 tail #connect
 Cs0 f2 head f1 mainIn #connect
