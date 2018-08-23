@@ -10,8 +10,38 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">Concurrency</ui:define>
 		<ui:define name="content">
-			Concurrency demo should be here
-			
+			<h:form id="form">
+
+				<p:outputPanel layout="block">
+					<p:outputLabel
+						value="This is the feature to get total found result base on the age that user input. Please config your direction path to {workshop}/resources/test.json, then input your age"></p:outputLabel>
+				</p:outputPanel>
+
+				<p:outputPanel layout="block">
+					<p:outputLabel value="Json Path: "></p:outputLabel>
+					<p:inputText placeholder="Ex: D:\Workshop\resources\test.json"
+						value="#{data.jsonPath}"></p:inputText>
+				</p:outputPanel>
+
+				<p:outputPanel layout="block">
+					<p:outputLabel value="Filter Age: "></p:outputLabel>
+					<p:inputText placeholder="50" value="#{data.age}"></p:inputText>
+				</p:outputPanel>
+
+				<p:outputPanel layout="block">
+					<p:outputLabel value="Found: "></p:outputLabel>
+					<p:outputLabel value=" #{data.result} items"></p:outputLabel>
+				</p:outputPanel>
+
+
+				<p:outputPanel>
+					<p:outputLabel value="Executed Time: "></p:outputLabel>
+					<p:outputLabel value="#{data.totalTime} ms"></p:outputLabel>
+				</p:outputPanel>
+
+				<p:commandButton actionListener="#{logic.callService}"
+					value="Call Service"></p:commandButton>
+			</h:form>
 		</ui:define>
 	</ui:composition>
 </h:body>
