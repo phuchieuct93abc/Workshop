@@ -1,0 +1,4 @@
+MarketData #class
+com.axonactive.workshop.market.Market #namespace
+stocks List<com.axonactive.workshop.market.Stock> #field
+stocks PERSISTENT #fieldModifier
