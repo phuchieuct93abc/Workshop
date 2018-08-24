@@ -169,7 +169,7 @@ Wp0 f10 81 305 30 30 -41 17 #rect
 Wp0 f10 @|StartRequestIcon #fIcon
 Wp0 f11 targetWindow NEW #txt
 Wp0 f11 targetDisplay TOP #txt
-Wp0 f11 richDialogId com.axonactive.workshop.component.frontend.RenderBlocking #txt
+Wp0 f11 richDialogId com.axonactive.workshop.component.frontend.RenderBlocking2 #txt
 Wp0 f11 startMethod start() #txt
 Wp0 f11 type com.axonactive.workshop.Data #txt
 Wp0 f11 requestActionDecl '<> param;' #txt

@@ -5,5 +5,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
     version="2.1">
-
+    <render-kit>
+	    <renderer>
+	        <component-family>javax.faces.Output</component-family>
+	        <renderer-type>javax.faces.Head</renderer-type>
+	        <renderer-class>com.example.HeadRenderer</renderer-class>
+	    </renderer>
+	</render-kit>
 </faces-config>

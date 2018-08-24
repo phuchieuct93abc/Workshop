@@ -1,3 +1,4 @@
-${WORKSPACE}
-classes
-lib/*
+
+classes/
+
+src_dataClasses/
