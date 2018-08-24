@@ -10,20 +10,48 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">RenderBlocking2</ui:define>
 		<ui:define name="content">
-			 <h3 id="inner"></h3>
-			 <script type="text/javascript">
+		<div class="row">
+			<div class="main_cbrand text-center roomy-100">
+				<div class="col-md-2 col-sm-4 col-xs-6">
+	                 <div class="cbrand_item m-bottom-10">
+	                     <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/1.jpg" alt=""/></h:link>
+	                 </div>
+	             </div>
+	             <div class="col-md-2 col-sm-4 col-xs-6">
+	                 <div class="cbrand_item m-bottom-10">
+	                     <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/2.jpg" alt=""/></h:link>
+	                 </div>
+	             </div>
+	             <div class="col-md-2 col-sm-4 col-xs-6">
+	                 <div class="cbrand_item m-bottom-10">
+	                    <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/3.jpg" alt=""/></h:link>
+	                 </div>
+	             </div>
+	             <div class="col-md-2 col-sm-4 col-xs-6">
+	                 <div class="cbrand_item m-bottom-10">
+	                     <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/4.jpg" alt=""/></h:link>
+	                 </div>
+	             </div>
+	             <div class="col-md-2 col-sm-4 col-xs-6">
+	                 <div class="cbrand_item m-bottom-10">
+	                     <h:link onclick=""><h:graphicImage library="ivy-webcontent" name="resources/images/clients/5.jpg" alt=""/></h:link>
+	                 </div>
+	             </div>
+	        </div>
+        </div>
+         <h1>Please wait a moment to execute function:</h1>
+		 <h3 id="inner"></h3>
+		 <script>
 			 $(window).load(function() {
-				 function sleep(ms)
-						{
-							var dt = new Date();
-							dt.setTime(dt.getTime() + ms)
-							while (new Date().getTime() &lt; dt.getTime());
-							return dt;
-						}
-						document.getElementById('inner').innerHTML = sleep(5000); 
-						});
-			  	
-			 </script>
+			 	 var n = 0;
+			 	 var x = 0;
+					while (n &lt; 7000000000) {
+					  n++;
+					  x += n;
+					}
+				document.getElementById('inner').innerHTML = x; 
+			});
+		 </script>
 		</ui:define>
 	</ui:composition>
 </h:body>
