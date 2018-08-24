@@ -27,6 +27,11 @@ Wp0 @RichDialog f11 '' #zField
 Wp0 @EndTask f12 '' #zField
 Wp0 @PushWFArc f13 '' #zField
 Wp0 @PushWFArc f14 '' #zField
+Wp0 @StartRequest f15 '' #zField
+Wp0 @EndTask f16 '' #zField
+Wp0 @RichDialog f17 '' #zField
+Wp0 @PushWFArc f18 '' #zField
+Wp0 @PushWFArc f19 '' #zField
 >Proto Wp0 Wp0 Workshop #zField
 Wp0 f0 outLink concurrency.ivp #txt
 Wp0 f0 type com.axonactive.workshop.Data #txt
@@ -184,6 +189,67 @@ Wp0 f13 expr out #txt
 Wp0 f13 111 320 168 320 #arcP
 Wp0 f14 expr out #txt
 Wp0 f14 280 320 305 320 #arcP
+Wp0 f15 outLink market.ivp #txt
+Wp0 f15 type com.axonactive.workshop.Data #txt
+Wp0 f15 inParamDecl '<> param;' #txt
+Wp0 f15 actionDecl 'com.axonactive.workshop.Data out;
+' #txt
+Wp0 f15 guid 165678EDF975415C #txt
+Wp0 f15 requestEnabled true #txt
+Wp0 f15 triggerEnabled false #txt
+Wp0 f15 callSignature market() #txt
+Wp0 f15 persist false #txt
+Wp0 f15 taskData 'TaskTriggered.ROL=Everybody
+TaskTriggered.EXTYPE=0
+TaskTriggered.EXPRI=2
+TaskTriggered.TYPE=0
+TaskTriggered.PRI=2
+TaskTriggered.EXROL=Everybody' #txt
+Wp0 f15 caseData businessCase.attach=true #txt
+Wp0 f15 showInStartList 1 #txt
+Wp0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>market</name>
+        <nameStyle>6,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Wp0 f15 @C|.responsibility Everybody #txt
+Wp0 f15 81 401 30 30 -19 17 #rect
+Wp0 f15 @|StartRequestIcon #fIcon
+Wp0 f16 type com.axonactive.workshop.Data #txt
+Wp0 f16 305 401 30 30 0 15 #rect
+Wp0 f16 @|EndIcon #fIcon
+Wp0 f17 targetWindow NEW #txt
+Wp0 f17 targetDisplay TOP #txt
+Wp0 f17 richDialogId com.axonactive.workshop.market.Market #txt
+Wp0 f17 startMethod start() #txt
+Wp0 f17 type com.axonactive.workshop.Data #txt
+Wp0 f17 requestActionDecl '<> param;' #txt
+Wp0 f17 responseActionDecl 'com.axonactive.workshop.Data out;
+' #txt
+Wp0 f17 responseMappingAction 'out=in;
+' #txt
+Wp0 f17 isAsynch false #txt
+Wp0 f17 isInnerRd false #txt
+Wp0 f17 userContext '* ' #txt
+Wp0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Market</name>
+        <nameStyle>6,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Wp0 f17 168 394 112 44 -18 -8 #rect
+Wp0 f17 @|RichDialogIcon #fIcon
+Wp0 f18 expr out #txt
+Wp0 f18 111 416 168 416 #arcP
+Wp0 f19 expr out #txt
+Wp0 f19 280 416 305 416 #arcP
 >Proto Wp0 .type com.axonactive.workshop.Data #txt
 >Proto Wp0 .processKind NORMAL #txt
 >Proto Wp0 0 0 32 24 18 0 #rect
@@ -200,3 +266,7 @@ Wp0 f10 mainOut f13 tail #connect
 Wp0 f13 head f11 mainIn #connect
 Wp0 f11 mainOut f14 tail #connect
 Wp0 f14 head f12 mainIn #connect
+Wp0 f15 mainOut f18 tail #connect
+Wp0 f18 head f17 mainIn #connect
+Wp0 f17 mainOut f19 tail #connect
+Wp0 f19 head f16 mainIn #connect

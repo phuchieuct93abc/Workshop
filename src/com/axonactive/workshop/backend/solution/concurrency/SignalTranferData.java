@@ -1,4 +1,4 @@
-package com.axonactive.workshop.backend.soluction.concurrency;
+package com.axonactive.workshop.backend.solution.concurrency;
 
 public class SignalTranferData {
 	

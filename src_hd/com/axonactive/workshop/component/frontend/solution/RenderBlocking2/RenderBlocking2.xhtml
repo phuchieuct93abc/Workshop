@@ -41,16 +41,18 @@
         </div>
          <h1>Please wait a moment to execute function:</h1>
 		 <h3 id="inner"></h3>
-		 <script>
-			 $(window).load(function() {
-			 	 var n = 0;
-			 	 var x = 0;
-					while (n &lt; 7000000000) {
-					  n++;
-					  x += n;
-					}
-				document.getElementById('inner').innerHTML = x; 
-			});
+		 <script  type="text/javascript" lang="JavaScript">
+		 //<![CDATA[
+				 $(window).load(function() {
+				 	 var n = 0;
+				 	 var x = 0;
+						while (n < 7000000000) {
+						  n++;
+						  x += n;
+						}
+					document.getElementById('inner').innerHTML = x; 
+				}); 
+		 	//]]>
 		 </script>
 		</ui:define>
 	</ui:composition>

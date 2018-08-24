@@ -42,18 +42,19 @@
         <h1>Please wait 5s to execute function:</h1>
 		<h3 id="inner" ></h3>
 		<script type="text/javascript">
-		  
+		  //<![CDATA[
 		  function execute()
 			{	
 				 var n = 0;
 				 var x = 0;
-					while (n &lt; 7000000000) {
+					while (n < 7000000000) {
 					  n++;
 					  x += n;
 				}
 				return x;
 			}
 		 document.getElementById('inner').innerHTML = execute(); 
+		 //]]>
 		</script> 
 		</ui:define>
 	</ui:composition>

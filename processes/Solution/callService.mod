@@ -59,7 +59,7 @@ ce0 f5 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f5 actionTable 'out=in;
 ' #txt
-ce0 f5 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+ce0 f5 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
 import com.axonactive.workshop.backend.concurrency.rest.Person;
 import com.axonactive.workshop.backend.concurrency.rest.PersonalInformation;
 import com.axonactive.workshop.backend.concurrency.rest.Address;
@@ -102,9 +102,10 @@ ce0 f3 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f3 actionTable 'out=in;
 ' #txt
-ce0 f3 actionCode 'import com.axonactive.workshop.backend.SignalTransferHelper;
-import com.axonactive.workshop.backend.soluction.concurrency.SignalTranferData;
-import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+ce0 f3 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SignalTranferData;
+import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
+import com.axonactive.workshop.backend.SignalTransferHelper;
+
 
 import java.util.concurrent.SynchronousQueue;
 import ch.ivyteam.ivy.process.model.value.SignalCode;
@@ -143,7 +144,7 @@ ce0 f13 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f13 actionTable 'out=in;
 ' #txt
-ce0 f13 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+ce0 f13 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
 import com.axonactive.workshop.backend.concurrency.rest.Person;
 import com.axonactive.workshop.backend.concurrency.rest.RestClient;
 
@@ -165,7 +166,7 @@ ce0 f13 138 243 144 44 -63 -8 #rect
 ce0 f13 @|StepIcon #fIcon
 ce0 f8 actionDecl 'Solution.callServiceData out;
 ' #txt
-ce0 f8 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SignalTranferData;
+ce0 f8 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SignalTranferData;
 import com.axonactive.workshop.backend.SignalTransferHelper;
 SignalTranferData signalData = SignalTransferHelper.createInstance().toSignalData(signal.getSignalData() as String, SignalTranferData.class) as SignalTranferData;
 out.personId = signalData.id;
@@ -190,7 +191,7 @@ ce0 f9 355 250 30 30 0 15 #rect
 ce0 f9 @|EndIcon #fIcon
 ce0 f7 actionDecl 'Solution.callServiceData out;
 ' #txt
-ce0 f7 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SignalTranferData;
+ce0 f7 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SignalTranferData;
 import com.axonactive.workshop.backend.SignalTransferHelper;
 SignalTranferData signalData = SignalTransferHelper.createInstance().toSignalData(signal.getSignalData() as String, SignalTranferData.class) as SignalTranferData;
 out.personId = signalData.id;
@@ -214,7 +215,7 @@ ce0 f15 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f15 actionTable 'out=in;
 ' #txt
-ce0 f15 actionCode 'import com.axonactive.workshop.backend.soluction.concurrency.SynThreadManager;
+ce0 f15 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
 import com.axonactive.workshop.backend.concurrency.rest.Address;
 import com.axonactive.workshop.backend.concurrency.rest.Person;
 import com.axonactive.workshop.backend.concurrency.rest.RestClient;

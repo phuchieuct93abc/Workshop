@@ -23,4 +23,34 @@
             </feature>
         </configuration>
     </restClient>
+    <restClient>
+        <uuid>83406c1f-565d-4a7d-a391-53ed18c34242</uuid>
+        <name>SYMBOLS</name>
+        <configuration>
+            <uri>https://api.iextrading.com/1.0/ref-data/symbols</uri>
+            <property>
+                <name>JSON.Deserialization.FAIL_ON_UNKNOWN_PROPERTIES</name>
+                <value>false</value>
+                <password>false</password>
+            </property>
+            <feature>
+                <class>ch.ivyteam.ivy.rest.client.mapper.JsonFeature</class>
+            </feature>
+        </configuration>
+    </restClient>
+    <restClient>
+        <uuid>a5cac04d-92a1-45cd-afee-41dbf060578f</uuid>
+        <name>PRICE</name>
+        <configuration>
+            <uri>https://api.iextrading.com/1.0/stock/{symbol}/price</uri>
+            <property>
+                <name>JSON.Deserialization.FAIL_ON_UNKNOWN_PROPERTIES</name>
+                <value>false</value>
+                <password>false</password>
+            </property>
+            <feature>
+                <class>ch.ivyteam.ivy.rest.client.mapper.JsonFeature</class>
+            </feature>
+        </configuration>
+    </restClient>
 </restClients>
