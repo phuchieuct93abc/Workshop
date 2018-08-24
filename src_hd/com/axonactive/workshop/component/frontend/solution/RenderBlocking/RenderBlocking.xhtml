@@ -5,14 +5,16 @@
 	xmlns:ic="http://ivyteam.ch/jsf/component"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:pe="http://primefaces.org/ui/extensions"
-	xmlns:pm="http://primefaces.org/mobile">
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions">
 <h:body>
 	<ui:composition template="/layouts/basicSolution.xhtml">
 		<ui:define name="cssSolution">
 			<h:outputStylesheet name="resources/minify/css/workshop.min.css" />
 		</ui:define>
 		<ui:define name="jsSolution">
-			<h:outputScript library="ivy-webcontent" name="/resources/minify/js/workshop.min.js"/>
+			<o:deferredScript defer="true" async="true" library="ivy-webcontent" name="/resources/minify/js/workshop.min.js" />
 		</ui:define>
 		<ui:define name="title">FrontEnd Issue</ui:define>
 		<ui:define name="content">
