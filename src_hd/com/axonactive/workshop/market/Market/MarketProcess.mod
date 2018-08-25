@@ -70,7 +70,7 @@ Ms0 f6 actionDecl 'com.axonactive.workshop.market.Market.MarketData out;
 Ms0 f6 actionTable 'out=in;
 ' #txt
 Ms0 f6 actionCode 'import com.axonactive.workshop.market.MarketController;
-out.stocks = MarketController.getStocks();
+out.stocks = MarketController.getStocksMultithreading();
 
 ' #txt
 Ms0 f6 type com.axonactive.workshop.market.Market.MarketData #txt
