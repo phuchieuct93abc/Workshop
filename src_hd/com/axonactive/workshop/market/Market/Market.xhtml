@@ -15,16 +15,16 @@
 			</h3>
 			
 			<p:dataTable var="stock" value="#{data.stocks}">
-			    <p:column headerText="symbol">
+			    <p:column headerText="Symbol">
 			        <h:outputText value="#{stock.symbol.symbol}" />
 			    </p:column>
 			 
-			    <p:column headerText="name">
+			    <p:column headerText="Name">
 			        <h:outputText value="#{stock.symbol.name}" />
 			    </p:column>
 			 
-			    <p:column headerText="price">
-			        <h:outputText value="#{stock.price}" />
+			    <p:column headerText="Price">
+			        <h:outputText value="#{stock.price} $" />
 			    </p:column>
 			</p:dataTable>
 			
