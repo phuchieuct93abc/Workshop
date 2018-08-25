@@ -1,7 +1,7 @@
 [Ivy]
 1656612AE87FE6AB 3.20 #module
 >Proto >Proto Collection #zClass
-Rs0 RenderBlocking2Process Big #zClass
+Rs0 PageProcess Big #zClass
 Rs0 RD #cInfo
 Rs0 #process
 Rs0 @TextInP .ui2RdDataAction .ui2RdDataAction #zField
@@ -23,9 +23,9 @@ Rs0 @PushWFArc f5 '' #zField
 Rs0 @RichDialogMethodStart f6 '' #zField
 Rs0 @RichDialogProcessEnd f7 '' #zField
 Rs0 @PushWFArc f8 '' #zField
->Proto Rs0 Rs0 RenderBlocking2Process #zField
+>Proto Rs0 Rs0 PageProcess #zField
 Rs0 f0 guid 1656612AEA7FFF6B #txt
-Rs0 f0 type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
+Rs0 f0 type com.axonactive.workshop.component.frontend.Page.PageData #txt
 Rs0 f0 method start() #txt
 Rs0 f0 disableUIEvents true #txt
 Rs0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
@@ -42,14 +42,14 @@ Rs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Rs0 f0 83 51 26 26 -16 15 #rect
 Rs0 f0 @|RichDialogInitStartIcon #fIcon
-Rs0 f1 type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
+Rs0 f1 type com.axonactive.workshop.component.frontend.Page.PageData #txt
 Rs0 f1 211 51 26 26 0 12 #rect
 Rs0 f1 @|RichDialogProcessEndIcon #fIcon
 Rs0 f2 expr out #txt
 Rs0 f2 109 64 211 64 #arcP
 Rs0 f3 guid 1656612AEB826DB7 #txt
-Rs0 f3 type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
-Rs0 f3 actionDecl 'com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data out;
+Rs0 f3 type com.axonactive.workshop.component.frontend.Page.PageData #txt
+Rs0 f3 actionDecl 'com.axonactive.workshop.component.frontend.Page.PageData out;
 ' #txt
 Rs0 f3 actionTable 'out=in;
 ' #txt
@@ -62,14 +62,14 @@ Rs0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Rs0 f3 83 147 26 26 -15 12 #rect
 Rs0 f3 @|RichDialogProcessStartIcon #fIcon
-Rs0 f4 type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
+Rs0 f4 type com.axonactive.workshop.component.frontend.Page.PageData #txt
 Rs0 f4 guid 1656612AEB91B128 #txt
 Rs0 f4 211 147 26 26 0 12 #rect
 Rs0 f4 @|RichDialogEndIcon #fIcon
 Rs0 f5 expr out #txt
 Rs0 f5 109 160 211 160 #arcP
 Rs0 f6 guid 16570F64556384A6 #txt
-Rs0 f6 type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
+Rs0 f6 type com.axonactive.workshop.component.frontend.Page.PageData #txt
 Rs0 f6 method show() #txt
 Rs0 f6 disableUIEvents false #txt
 Rs0 f6 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
@@ -89,11 +89,11 @@ Rs0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Rs0 f6 83 243 26 26 -19 15 #rect
 Rs0 f6 @|RichDialogMethodStartIcon #fIcon
-Rs0 f7 type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
+Rs0 f7 type com.axonactive.workshop.component.frontend.Page.PageData #txt
 Rs0 f7 211 243 26 26 0 12 #rect
 Rs0 f7 @|RichDialogProcessEndIcon #fIcon
 Rs0 f8 109 256 211 256 #arcP
->Proto Rs0 .type com.axonactive.workshop.component.frontend.RenderBlocking2.RenderBlocking2Data #txt
+>Proto Rs0 .type com.axonactive.workshop.component.frontend.Page.PageData #txt
 >Proto Rs0 .processKind HTML_DIALOG #txt
 >Proto Rs0 -8 -8 16 16 16 26 #rect
 >Proto Rs0 '' #fIcon

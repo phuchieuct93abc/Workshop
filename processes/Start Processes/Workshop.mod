@@ -137,7 +137,7 @@ Wp0 f8 expr out #txt
 Wp0 f8 111 192 168 192 #arcP
 Wp0 f9 expr out #txt
 Wp0 f9 280 192 305 192 #arcP
-Wp0 f10 outLink renderBlocking.ivp #txt
+Wp0 f10 outLink frontend.ivp #txt
 Wp0 f10 type com.axonactive.workshop.Data #txt
 Wp0 f10 inParamDecl '<> param;' #txt
 Wp0 f10 actionDecl 'com.axonactive.workshop.Data out;
@@ -145,7 +145,7 @@ Wp0 f10 actionDecl 'com.axonactive.workshop.Data out;
 Wp0 f10 guid 164D122D74B32D48 #txt
 Wp0 f10 requestEnabled true #txt
 Wp0 f10 triggerEnabled false #txt
-Wp0 f10 callSignature renderBlocking() #txt
+Wp0 f10 callSignature frontend() #txt
 Wp0 f10 persist false #txt
 Wp0 f10 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -158,18 +158,18 @@ Wp0 f10 showInStartList 1 #txt
 Wp0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>renderBlocking</name>
-        <nameStyle>14,5,7
+        <name>frontend</name>
+        <nameStyle>8,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Wp0 f10 @C|.responsibility Everybody #txt
-Wp0 f10 81 305 30 30 -41 17 #rect
+Wp0 f10 81 305 30 30 -22 17 #rect
 Wp0 f10 @|StartRequestIcon #fIcon
 Wp0 f11 targetWindow NEW #txt
 Wp0 f11 targetDisplay TOP #txt
-Wp0 f11 richDialogId com.axonactive.workshop.component.frontend.RenderBlocking2 #txt
+Wp0 f11 richDialogId com.axonactive.workshop.component.frontend.Page #txt
 Wp0 f11 startMethod start() #txt
 Wp0 f11 type com.axonactive.workshop.Data #txt
 Wp0 f11 requestActionDecl '<> param;' #txt
