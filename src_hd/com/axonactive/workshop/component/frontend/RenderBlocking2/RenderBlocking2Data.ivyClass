@@ -1,2 +1,4 @@
 RenderBlocking2Data #class
 com.axonactive.workshop.component.frontend.RenderBlocking2 #namespace
+show Boolean #field
+show PERSISTENT #fieldModifier
