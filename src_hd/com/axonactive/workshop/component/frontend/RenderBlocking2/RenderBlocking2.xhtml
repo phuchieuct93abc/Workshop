@@ -11,7 +11,9 @@
 		<ui:define name="title">RenderBlocking2</ui:define>
 
 		<ui:define name="content">
-
+						
+				
+				
 				<div class="row">
 	<div class="main_cbrand text-center roomy-100">
 		<div class="col-md-2 col-sm-4 col-xs-6">
@@ -56,7 +58,24 @@
 		</div>
 	</div>
 </div>
-	
+	<h1>Please wait 5s to execute function:</h1>
+		
+<h3 id="inner"></h3>
+				<script type="text/javascript">
+					//<![CDATA[
+					function execute() {
+						var n = 0;
+						var x = 0;
+						while (n < 7000000000) {
+							n++;
+							x += n;
+						}
+						return x;
+					}
+					document.getElementById('inner').innerHTML = execute();
+					//]]>
+				</script>
+	<h:form>
 				<h3>Try to switch me</h3>
 				<p:tabView id="tabView">
 					<p:ajax event="tabChange" update="tabView" />
@@ -71,25 +90,9 @@
 						</p:outputPanel>
 					</p:tab>
 				</p:tabView>
+    </h:form>
     
-    
-				<h1>Please wait 5s to execute function:</h1>
-				<h3 id="inner"></h3>
-				<script type="text/javascript">
-					//<![CDATA[
-					//Calculation something
-					function execute() {
-						var n = 0;
-						var x = 0;
-						while (n < 7000000000) {
-							n++;
-							x += n;
-						}
-						return x;
-					}
-					document.getElementById('inner').innerHTML = execute();
-					//]]>
-				</script>
+				
 
 
 		</ui:define>

@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:f="http://xmlns.jcp.org/jsf/core"
-  xmlns:h="http://xmlns.jcp.org/jsf/html"
-  xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-  xmlns:ic="http://ivyteam.ch/jsf/component"
-  xmlns:p="http://primefaces.org/ui">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
-   <title><ui:insert name="title">Ivy Html Dialog</ui:insert></title>
-  <link rel="shortcut icon" href="#{resource['ivy-webcontent:layouts/images/ivy_favicon_48.png']}" />
-  <ui:insert name="jsIssue" />
-  <h:outputStylesheet name="layouts/styles/bootstrap-modified-for-jsf.css" />
-  <h:outputStylesheet name="layouts/styles/bootstrap-reset.css" />
-  <h:outputStylesheet name="layouts/styles/ivy-common-6.css" />
-  
+	<title><ui:insert name="title">Ivy Html Dialog</ui:insert></title>
+	<link rel="shortcut icon"
+		href="#{resource['ivy-webcontent:layouts/images/ivy_favicon_48.png']}" />
+	<h:outputStylesheet
+		name="layouts/styles/bootstrap-modified-for-jsf.css" />
+	<h:outputStylesheet name="layouts/styles/bootstrap-reset.css" />
+	<h:outputStylesheet name="layouts/styles/ivy-common-6.css" />
+	<ui:insert name="cssIssue" />
+
 </h:head>
 <h:body>
- <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
- 
-<p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
-    Loading...
-</p:dialog>
+	<p:ajaxStatus onstart="PF('statusDialog').show()"
+		onsuccess="PF('statusDialog').hide()" />
 
-  
-    <ui:insert name="content">
-      </ui:insert>
+	<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+		closable="false" resizable="false" showHeader="false">
+	    Loading...
+	</p:dialog>
 
- 
-  
-  <ui:insert name="cssIssue" />
-  
- 
-  
+	<ui:insert name="content">
+	</ui:insert>
+
+
+
+
+
 </h:body>
 </html>
