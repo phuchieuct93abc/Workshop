@@ -7,95 +7,26 @@
 	xmlns:pe="http://primefaces.org/ui/extensions"
 	xmlns:pm="http://primefaces.org/mobile">
 <h:body>
-	<ui:composition template="/layouts/basic.xhtml">
+	<ui:composition template="/layouts/basicSolution.xhtml">
 		<ui:define name="title">RenderBlocking2</ui:define>
 
 		<ui:define name="content">
-			<h1>Please wait 5s to execute function:</h1>
-			<h3 id="inner"></h3>
-			<div class="row">
-				<div class="main_cbrand text-center roomy-100">
-					<div class="col-md-2 col-sm-4 col-xs-6">
-						<div class="cbrand_item m-bottom-10">
-							<h:link onclick="">
-								<h:graphicImage library="ivy-webcontent"
-									name="resources/images/clients/1.jpg" alt="" />
-							</h:link>
-						</div>
-					</div>
-					<div class="col-md-2 col-sm-4 col-xs-6">
-						<div class="cbrand_item m-bottom-10">
-							<h:link onclick="">
-								<h:graphicImage library="ivy-webcontent"
-									name="resources/images/clients/2.jpg" alt="" />
-							</h:link>
-						</div>
-					</div>
-					<div class="col-md-2 col-sm-4 col-xs-6">
-						<div class="cbrand_item m-bottom-10">
-							<h:link onclick="">
-								<h:graphicImage library="ivy-webcontent"
-									name="resources/images/clients/3.jpg" alt="" />
-							</h:link>
-						</div>
-					</div>
-					<div class="col-md-2 col-sm-4 col-xs-6">
-						<div class="cbrand_item m-bottom-10">
-							<h:link onclick="">
-								<h:graphicImage library="ivy-webcontent"
-									name="resources/images/clients/4.jpg" alt="" />
-							</h:link>
-						</div>
-					</div>
-					<div class="col-md-2 col-sm-4 col-xs-6">
-						<div class="cbrand_item m-bottom-10">
-							<h:link onclick="">
-								<h:graphicImage library="ivy-webcontent"
-									name="resources/images/clients/5.jpg" alt="" />
-							</h:link>
-						</div>
-					</div>
-				</div>
-			</div>
+			<span>Long calculation</span>
+			<span id="result"></span>
+			<h:outputScript name="/script.js" />			
+			<ui:include src="logos.xhtml"></ui:include>
 
-			<h:form>
-				<h3>Try to switch me</h3>
-				<p:tabView id="tabView">
-					<p:ajax event="tabChange" update="tabView" />
-
-					<p:tab title="Tab 1">
-						Tab 1
-
-					</p:tab>
-					<p:tab title="Tab 2">
-						<p:outputPanel id="component">
-							<ic:com.axonactive.workshop.component.frontend.solution.Component></ic:com.axonactive.workshop.component.frontend.solution.Component>
-						</p:outputPanel>
-					</p:tab>
-				</p:tabView>
-			</h:form>
-
-
-			<script type="text/javascript">
-				//<![CDATA[
-				$(window).load(function() {
-
-					function execute() {
-						var n = 0;
-						var x = 0;
-						while (n < 7000000000) {
-							n++;
-							x += n;
-						}
-						return x;
-					}
-					document.getElementById('inner').innerHTML = execute();
-				})
-				//]]>
-			</script>
-
-
+			<ui:include src="tab.xhtml"></ui:include>
 		</ui:define>
+
+		
+		<ui:define name="js">
+			<h:outputScript library="ivy-webcontent" name="/resources/minify/js/workshop.min.js" />
+		</ui:define>
+		<ui:define name="css">
+			<h:outputStylesheet name="/resources/minify/css/workshop.min.css" />
+		</ui:define>
+
 	</ui:composition>
 </h:body>
 </html>

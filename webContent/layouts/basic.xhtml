@@ -8,13 +8,9 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title><ui:insert name="title">Ivy Html Dialog</ui:insert></title>
-	<link rel="shortcut icon"
-		href="#{resource['ivy-webcontent:layouts/images/ivy_favicon_48.png']}" />
-	<h:outputStylesheet
-		name="layouts/styles/bootstrap-modified-for-jsf.css" />
-	<h:outputStylesheet name="layouts/styles/bootstrap-reset.css" />
-	<h:outputStylesheet name="layouts/styles/ivy-common-6.css" />
-	<ui:insert name="cssIssue" />
+
+
+	<ui:insert name="js" />
 
 </h:head>
 <h:body>
@@ -25,13 +21,14 @@
 		closable="false" resizable="false" showHeader="false">
 	    Loading...
 	</p:dialog>
-
-	<ui:insert name="content">
-	</ui:insert>
-
-
-
-
+	<div class="container">
+		<ui:insert name="content">
+		</ui:insert>
+	</div>
+	<h:outputStylesheet
+		name="layouts/styles/bootstrap-modified-for-jsf.css" />
+	<h:outputStylesheet name="layouts/styles/bootstrap-reset.css" />
+	<ui:insert name="css" />
 
 </h:body>
 </html>
