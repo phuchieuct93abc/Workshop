@@ -37,9 +37,7 @@ a, div, span, input, textarea, li, strong, button {
   -webkit-touch-callout: none;
 }
 
-a, div, span, p, input, textarea, li, strong, button {
-  font-family: 'robotoregular' !important;
-}
+
 /* Add action icon delegate, reserve, open, reset for task widget*/
 @font-face {
   font-family: "true-minimalistic-icons";
@@ -414,12 +412,7 @@ a, div, span, p, input, textarea, li, strong, button {
   margin-top: 5px;
 }
 
-#global-search-container>li>span {
-  color: #546E7A;
-  padding: 15px;
-  display: block;
-  font-family: "robotoregular";
-}
+
 
 #global-search-container.active-menu {
   margin: 20px 0px 0px -400px !important;
