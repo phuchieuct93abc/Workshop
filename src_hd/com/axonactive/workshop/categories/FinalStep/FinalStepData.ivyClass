@@ -1,0 +1,4 @@
+FinalStepData #class
+com.axonactive.workshop.categories.FinalStep #namespace
+cacheProcess com.axonactive.workshop.categories.CategoriesProcessData #field
+cacheProcess PERSISTENT #fieldModifier

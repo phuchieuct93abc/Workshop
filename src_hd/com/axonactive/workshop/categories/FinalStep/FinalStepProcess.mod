@@ -29,15 +29,15 @@ Fs0 @PushWFArc f12 '' #zField
 Fs0 @PushWFArc f2 '' #zField
 >Proto Fs0 Fs0 FinalStepProcess #zField
 Fs0 f0 guid 165361E2FE653B3D #txt
-Fs0 f0 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
-Fs0 f0 method start(com.axonactive.workshop.cache.CacheProcess) #txt
+Fs0 f0 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
+Fs0 f0 method start(com.axonactive.workshop.categories.CategoriesProcessData) #txt
 Fs0 f0 disableUIEvents true #txt
 Fs0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<com.axonactive.workshop.cache.CacheProcess cacheProcess> param = methodEvent.getInputArguments();
+<com.axonactive.workshop.categories.CategoriesProcessData cacheProcess> param = methodEvent.getInputArguments();
 ' #txt
 Fs0 f0 inParameterMapAction 'out.cacheProcess=param.cacheProcess;
 ' #txt
-Fs0 f0 outParameterDecl '<com.axonactive.workshop.cache.CacheProcess cacheProcess> result;
+Fs0 f0 outParameterDecl '<com.axonactive.workshop.categories.CategoriesProcessData cacheProcess> result;
 ' #txt
 Fs0 f0 outParameterMapAction 'result.cacheProcess=in.cacheProcess;
 ' #txt
@@ -52,12 +52,12 @@ Fs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Fs0 f0 83 51 26 26 -57 15 #rect
 Fs0 f0 @|RichDialogInitStartIcon #fIcon
-Fs0 f1 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
+Fs0 f1 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
 Fs0 f1 339 51 26 26 0 12 #rect
 Fs0 f1 @|RichDialogProcessEndIcon #fIcon
 Fs0 f3 guid 165361E2FF98A143 #txt
-Fs0 f3 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
-Fs0 f3 actionDecl 'com.axonactive.workshop.cache.FinalStep.FinalStepData out;
+Fs0 f3 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
+Fs0 f3 actionDecl 'com.axonactive.workshop.categories.FinalStep.FinalStepData out;
 ' #txt
 Fs0 f3 actionTable 'out=in;
 ' #txt
@@ -70,15 +70,15 @@ Fs0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Fs0 f3 83 147 26 26 -15 12 #rect
 Fs0 f3 @|RichDialogProcessStartIcon #fIcon
-Fs0 f4 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
+Fs0 f4 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
 Fs0 f4 guid 165361E2FF915159 #txt
 Fs0 f4 211 147 26 26 0 12 #rect
 Fs0 f4 @|RichDialogEndIcon #fIcon
 Fs0 f5 expr out #txt
 Fs0 f5 109 160 211 160 #arcP
 Fs0 f6 guid 1653622D29DD5F01 #txt
-Fs0 f6 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
-Fs0 f6 actionDecl 'com.axonactive.workshop.cache.FinalStep.FinalStepData out;
+Fs0 f6 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
+Fs0 f6 actionDecl 'com.axonactive.workshop.categories.FinalStep.FinalStepData out;
 ' #txt
 Fs0 f6 actionTable 'out=in;
 ' #txt
@@ -93,16 +93,16 @@ Fs0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Fs0 f6 83 275 26 26 -13 15 #rect
 Fs0 f6 @|RichDialogProcessStartIcon #fIcon
-Fs0 f7 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
+Fs0 f7 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
 Fs0 f7 guid 1653622EB9E9E48D #txt
 Fs0 f7 339 275 26 26 0 12 #rect
 Fs0 f7 @|RichDialogEndIcon #fIcon
-Fs0 f9 actionDecl 'com.axonactive.workshop.cache.FinalStep.FinalStepData out;
+Fs0 f9 actionDecl 'com.axonactive.workshop.categories.FinalStep.FinalStepData out;
 ' #txt
 Fs0 f9 actionTable 'out=in;
 ' #txt
 Fs0 f9 actionCode 'in.cacheProcess.needToReview = true;' #txt
-Fs0 f9 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
+Fs0 f9 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
 Fs0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -118,12 +118,12 @@ Fs0 f10 expr out #txt
 Fs0 f10 109 288 168 288 #arcP
 Fs0 f8 expr out #txt
 Fs0 f8 280 288 339 288 #arcP
-Fs0 f11 actionDecl 'com.axonactive.workshop.cache.FinalStep.FinalStepData out;
+Fs0 f11 actionDecl 'com.axonactive.workshop.categories.FinalStep.FinalStepData out;
 ' #txt
 Fs0 f11 actionTable 'out=in;
 ' #txt
 Fs0 f11 actionCode 'in.cacheProcess.needToReview = false;' #txt
-Fs0 f11 type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
+Fs0 f11 type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
 Fs0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -139,7 +139,7 @@ Fs0 f12 expr out #txt
 Fs0 f12 109 64 168 64 #arcP
 Fs0 f2 expr out #txt
 Fs0 f2 280 64 339 64 #arcP
->Proto Fs0 .type com.axonactive.workshop.cache.FinalStep.FinalStepData #txt
+>Proto Fs0 .type com.axonactive.workshop.categories.FinalStep.FinalStepData #txt
 >Proto Fs0 .processKind HTML_DIALOG #txt
 >Proto Fs0 -8 -8 16 16 16 26 #rect
 >Proto Fs0 '' #fIcon

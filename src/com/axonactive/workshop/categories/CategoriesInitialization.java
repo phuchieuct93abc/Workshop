@@ -1,4 +1,4 @@
-package com.axonactive.workshop.cache;
+package com.axonactive.workshop.categories;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -8,7 +8,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.apache.commons.collections4.CollectionUtils;
 
 import ch.ivyteam.ivy.environment.Ivy;
 
@@ -26,11 +25,7 @@ public class CategoriesInitialization {
 	@SuppressWarnings("unchecked")
     public List<String> loadCategories() {
 		int skipLine = 0;
-		List<Item> items = (List<Item>)CacheService.getDataFromCache(Constant.CACHE_CATEGORY_TYPES_IDENTIFIER);
-		if (CollectionUtils.isEmpty(items)) {
-			items = loadContent(getUrl(), Item.class, skipLine);
-			CacheService.saveDataToCache(items, Constant.CACHE_CATEGORY_TYPES_IDENTIFIER);
-		}
+		List<Item> items = loadContent(getUrl(), Item.class, skipLine);
 		return items.stream().map(Item::getCategory).collect(Collectors.toList());
 	}
 	
@@ -42,7 +37,7 @@ public class CategoriesInitialization {
 	private <T> List<T> loadContent(String csvPath, Class<T> clazz, int skipLines) {
 		try {
 			// This one simulates for heavy resource loading
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			Ivy.log().warn("Interupt by someone....", e);
 		}

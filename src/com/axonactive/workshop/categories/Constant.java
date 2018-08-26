@@ -1,4 +1,4 @@
-package com.axonactive.workshop.cache;
+package com.axonactive.workshop.categories;
 
 public class Constant {
 

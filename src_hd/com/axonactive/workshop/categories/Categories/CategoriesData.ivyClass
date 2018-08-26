@@ -1,0 +1,6 @@
+CategoriesData #class
+com.axonactive.workshop.categories.Categories #namespace
+cacheProcess com.axonactive.workshop.categories.CategoriesProcessData #field
+cacheProcess PERSISTENT #fieldModifier
+items List<String> #field
+items PERSISTENT #fieldModifier
