@@ -28,7 +28,7 @@ Wp0 @EndTask f12 '' #zField
 Wp0 @PushWFArc f13 '' #zField
 Wp0 @PushWFArc f14 '' #zField
 >Proto Wp0 Wp0 Workshop #zField
-Wp0 f0 outLink BackendIssue2.ivp #txt
+Wp0 f0 outLink Issue3.ivp #txt
 Wp0 f0 type com.axonactive.workshop.Data #txt
 Wp0 f0 inParamDecl '<> param;' #txt
 Wp0 f0 actionDecl 'com.axonactive.workshop.Data out;
@@ -36,7 +36,7 @@ Wp0 f0 actionDecl 'com.axonactive.workshop.Data out;
 Wp0 f0 guid 164D11E537451931 #txt
 Wp0 f0 requestEnabled true #txt
 Wp0 f0 triggerEnabled false #txt
-Wp0 f0 callSignature BackendIssue2() #txt
+Wp0 f0 callSignature Issue3() #txt
 Wp0 f0 persist false #txt
 Wp0 f0 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -49,14 +49,14 @@ Wp0 f0 showInStartList 1 #txt
 Wp0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>BackendIssue2</name>
-        <nameStyle>13,5,7
+        <name>Issue3</name>
+        <nameStyle>6,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Wp0 f0 @C|.responsibility Everybody #txt
-Wp0 f0 81 49 30 30 -43 17 #rect
+Wp0 f0 81 49 30 30 -19 17 #rect
 Wp0 f0 @|StartRequestIcon #fIcon
 Wp0 f1 type com.axonactive.workshop.Data #txt
 Wp0 f1 305 49 30 30 0 15 #rect
@@ -80,7 +80,7 @@ Wp0 f3 expr out #txt
 Wp0 f3 111 64 168 64 #arcP
 Wp0 f4 expr out #txt
 Wp0 f4 280 64 305 64 #arcP
-Wp0 f5 outLink BackendIssue1.ivp #txt
+Wp0 f5 outLink Issue1.ivp #txt
 Wp0 f5 type com.axonactive.workshop.Data #txt
 Wp0 f5 inParamDecl '<> param;' #txt
 Wp0 f5 actionDecl 'com.axonactive.workshop.Data out;
@@ -88,7 +88,7 @@ Wp0 f5 actionDecl 'com.axonactive.workshop.Data out;
 Wp0 f5 guid 164D120EB7585AFB #txt
 Wp0 f5 requestEnabled true #txt
 Wp0 f5 triggerEnabled false #txt
-Wp0 f5 callSignature BackendIssue1() #txt
+Wp0 f5 callSignature Issue1() #txt
 Wp0 f5 persist false #txt
 Wp0 f5 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -101,14 +101,14 @@ Wp0 f5 showInStartList 1 #txt
 Wp0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>BackendIssue1</name>
-        <nameStyle>13,5,7
+        <name>Issue1</name>
+        <nameStyle>6,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Wp0 f5 @C|.responsibility Everybody #txt
-Wp0 f5 81 177 30 30 -43 17 #rect
+Wp0 f5 81 177 30 30 -19 17 #rect
 Wp0 f5 @|StartRequestIcon #fIcon
 Wp0 f6 type com.axonactive.workshop.Data #txt
 Wp0 f6 305 177 30 30 0 15 #rect
@@ -132,7 +132,7 @@ Wp0 f8 expr out #txt
 Wp0 f8 111 192 168 192 #arcP
 Wp0 f9 expr out #txt
 Wp0 f9 280 192 305 192 #arcP
-Wp0 f10 outLink renderBlocking.ivp #txt
+Wp0 f10 outLink Issue5.ivp #txt
 Wp0 f10 type com.axonactive.workshop.Data #txt
 Wp0 f10 inParamDecl '<> param;' #txt
 Wp0 f10 actionDecl 'com.axonactive.workshop.Data out;
@@ -140,7 +140,7 @@ Wp0 f10 actionDecl 'com.axonactive.workshop.Data out;
 Wp0 f10 guid 164D122D74B32D48 #txt
 Wp0 f10 requestEnabled true #txt
 Wp0 f10 triggerEnabled false #txt
-Wp0 f10 callSignature renderBlocking() #txt
+Wp0 f10 callSignature Issue5() #txt
 Wp0 f10 persist false #txt
 Wp0 f10 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -153,14 +153,14 @@ Wp0 f10 showInStartList 1 #txt
 Wp0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>renderBlocking</name>
-        <nameStyle>14,5,7
+        <name>Issue5</name>
+        <nameStyle>6,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Wp0 f10 @C|.responsibility Everybody #txt
-Wp0 f10 81 305 30 30 -41 17 #rect
+Wp0 f10 81 305 30 30 -19 17 #rect
 Wp0 f10 @|StartRequestIcon #fIcon
 Wp0 f11 targetWindow NEW #txt
 Wp0 f11 targetDisplay TOP #txt
