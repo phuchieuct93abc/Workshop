@@ -80,7 +80,7 @@ cs0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 cs0 f6 158 74 112 44 -40 -8 #rect
 cs0 f6 @|StepIcon #fIcon
-cs0 f7 outLink categories.ivp #txt
+cs0 f7 outLink Issue4.ivp #txt
 cs0 f7 type com.axonactive.workshop.categories.CategoriesProcessData #txt
 cs0 f7 inParamDecl '<> param;' #txt
 cs0 f7 actionDecl 'com.axonactive.workshop.categories.CategoriesProcessData out;
@@ -88,7 +88,7 @@ cs0 f7 actionDecl 'com.axonactive.workshop.categories.CategoriesProcessData out;
 cs0 f7 guid 16577A3A2EF338D7 #txt
 cs0 f7 requestEnabled true #txt
 cs0 f7 triggerEnabled false #txt
-cs0 f7 callSignature categories() #txt
+cs0 f7 callSignature Issue4() #txt
 cs0 f7 persist false #txt
 cs0 f7 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -101,14 +101,14 @@ cs0 f7 showInStartList 1 #txt
 cs0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>categories.ivp</name>
-        <nameStyle>14,5,7
+        <name>Issue4</name>
+        <nameStyle>6,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 cs0 f7 @C|.responsibility Everybody #txt
-cs0 f7 71 81 30 30 -38 17 #rect
+cs0 f7 71 81 30 30 -19 17 #rect
 cs0 f7 @|StartRequestIcon #fIcon
 cs0 f9 targetWindow NEW #txt
 cs0 f9 targetDisplay TOP #txt

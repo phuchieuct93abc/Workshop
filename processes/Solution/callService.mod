@@ -33,9 +33,9 @@ ce0 @PushWFArc f12 '' #zField
 ce0 f0 inParamDecl '<java.lang.String id> param;' #txt
 ce0 f0 inParamTable 'out.personId=param.id;
 ' #txt
-ce0 f0 outParamDecl '<com.axonactive.workshop.backend.concurrency.rest.PersonalInformation personalInformation> result;
+ce0 f0 outParamDecl '<com.axonactive.workshop.backend.rest.PersonalInformation result> result;
 ' #txt
-ce0 f0 outParamTable 'result.personalInformation=in.result;
+ce0 f0 outParamTable 'result.result=in.result;
 ' #txt
 ce0 f0 actionDecl 'Solution.callServiceData out;
 ' #txt
@@ -44,13 +44,13 @@ ce0 f0 type Solution.callServiceData #txt
 ce0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>call(Person)</name>
-        <nameStyle>12,5,7
+        <name>call</name>
+        <nameStyle>4,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-ce0 f0 65 97 30 30 -33 17 #rect
+ce0 f0 65 97 30 30 -9 17 #rect
 ce0 f0 @|StartSubIcon #fIcon
 ce0 f1 type Solution.callServiceData #txt
 ce0 f1 593 97 30 30 0 15 #rect
@@ -59,10 +59,11 @@ ce0 f5 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f5 actionTable 'out=in;
 ' #txt
-ce0 f5 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
-import com.axonactive.workshop.backend.concurrency.rest.Person;
-import com.axonactive.workshop.backend.concurrency.rest.PersonalInformation;
-import com.axonactive.workshop.backend.concurrency.rest.Address;
+ce0 f5 actionCode 'import com.axonactive.workshop.backend.rest.Person;
+import com.axonactive.workshop.backend.rest.Address;
+import com.axonactive.workshop.backend.rest.PersonalInformation;
+import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
+
 
 
 in.result = new PersonalInformation();
@@ -144,9 +145,10 @@ ce0 f13 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f13 actionTable 'out=in;
 ' #txt
-ce0 f13 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
-import com.axonactive.workshop.backend.concurrency.rest.Person;
-import com.axonactive.workshop.backend.concurrency.rest.RestClient;
+ce0 f13 actionCode 'import com.axonactive.workshop.backend.rest.RestClient;
+import com.axonactive.workshop.backend.rest.Person;
+import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
+
 
 Person person = RestClient.getInstance().getPersonById(in.personId);
 
@@ -215,10 +217,10 @@ ce0 f15 actionDecl 'Solution.callServiceData out;
 ' #txt
 ce0 f15 actionTable 'out=in;
 ' #txt
-ce0 f15 actionCode 'import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
-import com.axonactive.workshop.backend.concurrency.rest.Address;
-import com.axonactive.workshop.backend.concurrency.rest.Person;
-import com.axonactive.workshop.backend.concurrency.rest.RestClient;
+ce0 f15 actionCode 'import com.axonactive.workshop.backend.rest.RestClient;
+import com.axonactive.workshop.backend.rest.Address;
+import com.axonactive.workshop.backend.solution.concurrency.SynThreadManager;
+
 
 Address address = RestClient.getInstance().getAddressById(in.personId);
 

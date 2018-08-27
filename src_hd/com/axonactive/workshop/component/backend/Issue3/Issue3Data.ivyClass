@@ -1,0 +1,10 @@
+Issue3Data #class
+com.axonactive.workshop.component.backend.Issue3 #namespace
+age String #field
+age PERSISTENT #fieldModifier
+result String #field
+result PERSISTENT #fieldModifier
+jsonPath String #field
+jsonPath PERSISTENT #fieldModifier
+totalTime Long #field
+totalTime PERSISTENT #fieldModifier
