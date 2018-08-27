@@ -1,5 +1,5 @@
-BackendIssue2Data #class
-com.axonactive.workshop.component.backend.BackendIssue2 #namespace
+Issue3Data #class
+com.axonactive.workshop.component.backend.Issue3 #namespace
 age String #field
 age PERSISTENT #fieldModifier
 result String #field

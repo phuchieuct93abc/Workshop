@@ -25,7 +25,7 @@ ce0 @PushWFArc f12 '' #zField
 ce0 @PushWFArc f13 '' #zField
 ce0 @PushWFArc f4 '' #zField
 >Proto ce0 ce0 cache #zField
-ce0 f0 outLink start.ivp #txt
+ce0 f0 outLink Issue4.ivp #txt
 ce0 f0 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f0 inParamDecl '<> param;' #txt
 ce0 f0 actionDecl 'com.axonactive.workshop.cache.CacheProcess out;
@@ -33,7 +33,7 @@ ce0 f0 actionDecl 'com.axonactive.workshop.cache.CacheProcess out;
 ce0 f0 guid 1651CE2FCB443263 #txt
 ce0 f0 requestEnabled true #txt
 ce0 f0 triggerEnabled false #txt
-ce0 f0 callSignature start() #txt
+ce0 f0 callSignature Issue4() #txt
 ce0 f0 persist false #txt
 ce0 f0 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -46,14 +46,14 @@ ce0 f0 showInStartList 1 #txt
 ce0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>start.ivp</name>
-        <nameStyle>9,5,7
+        <name>Issue4</name>
+        <nameStyle>6,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 ce0 f0 @C|.responsibility Everybody #txt
-ce0 f0 81 49 30 30 -21 17 #rect
+ce0 f0 81 49 30 30 -19 17 #rect
 ce0 f0 @|StartRequestIcon #fIcon
 ce0 f1 type com.axonactive.workshop.cache.CacheProcess #txt
 ce0 f1 1065 49 30 30 0 15 #rect

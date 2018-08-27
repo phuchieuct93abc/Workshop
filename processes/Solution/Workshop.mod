@@ -63,7 +63,7 @@ Wp0 f1 305 49 30 30 0 15 #rect
 Wp0 f1 @|EndIcon #fIcon
 Wp0 f2 targetWindow NEW #txt
 Wp0 f2 targetDisplay TOP #txt
-Wp0 f2 richDialogId com.axonactive.workshop.component.backend.solution.BackendIssue2 #txt
+Wp0 f2 richDialogId com.axonactive.workshop.component.backend.solution.Issue3 #txt
 Wp0 f2 startMethod start() #txt
 Wp0 f2 type com.axonactive.workshop.Data #txt
 Wp0 f2 requestActionDecl '<> param;' #txt
@@ -115,7 +115,7 @@ Wp0 f6 305 177 30 30 0 15 #rect
 Wp0 f6 @|EndIcon #fIcon
 Wp0 f7 targetWindow NEW #txt
 Wp0 f7 targetDisplay TOP #txt
-Wp0 f7 richDialogId com.axonactive.workshop.component.backend.solution.BackendIssue1 #txt
+Wp0 f7 richDialogId com.axonactive.workshop.component.backend.solution.Issue1 #txt
 Wp0 f7 startMethod start() #txt
 Wp0 f7 type com.axonactive.workshop.Data #txt
 Wp0 f7 requestActionDecl '<> param;' #txt

@@ -1,5 +1,5 @@
-BackendIssue2Data #class
-com.axonactive.workshop.component.backend.solution.BackendIssue2 #namespace
+Issue3Data #class
+com.axonactive.workshop.component.backend.solution.Issue3 #namespace
 serviceId String #field
 serviceId PERSISTENT #fieldModifier
 totalTime Long #field
