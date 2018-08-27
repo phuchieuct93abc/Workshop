@@ -2,7 +2,7 @@ callServiceData #class
 Solution #namespace
 queueId String #field
 queueId PERSISTENT #fieldModifier
-result com.axonactive.workshop.backend.concurrency.rest.PersonalInformation #field
+result com.axonactive.workshop.backend.rest.PersonalInformation #field
 result PERSISTENT #fieldModifier
 personId String #field
 personId PERSISTENT #fieldModifier

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.Optional;
 
-import com.axonactive.workshop.backend.concurrency.bestpractice.ParseJsonService;
+import com.axonactive.workshop.backend.section.ParseJsonService;
 
 public enum ServiceType {
 	

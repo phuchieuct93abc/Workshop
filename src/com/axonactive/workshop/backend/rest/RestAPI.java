@@ -1,4 +1,4 @@
-package com.axonactive.workshop.backend.concurrency.rest;
+package com.axonactive.workshop.backend.rest;
 
 import java.util.ArrayList;
 import java.util.List;

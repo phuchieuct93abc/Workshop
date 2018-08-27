@@ -1,7 +1,7 @@
 [Ivy]
 164D120CF419D3FF 3.20 #module
 >Proto >Proto Collection #zClass
-Ms0 MultiThreadProcess Big #zClass
+Ms0 BackendIssue1Process Big #zClass
 Ms0 RD #cInfo
 Ms0 #process
 Ms0 @TextInP .ui2RdDataAction .ui2RdDataAction #zField
@@ -31,9 +31,9 @@ Ms0 @PushWFArc f8 '' #zField
 Ms0 @GridStep f17 '' #zField
 Ms0 @PushWFArc f10 '' #zField
 Ms0 @PushWFArc f13 '' #zField
->Proto Ms0 Ms0 MultiThreadProcess #zField
+>Proto Ms0 Ms0 BackendIssue1Process #zField
 Ms0 f0 guid 164D120CF65666A8 #txt
-Ms0 f0 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f0 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f0 method start() #txt
 Ms0 f0 disableUIEvents true #txt
 Ms0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
@@ -51,8 +51,8 @@ Ms0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Ms0 f0 83 51 26 26 -16 15 #rect
 Ms0 f0 @|RichDialogInitStartIcon #fIcon
 Ms0 f3 guid 164D120CF8E95FE4 #txt
-Ms0 f3 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
-Ms0 f3 actionDecl 'com.axonactive.workshop.component.backend.MultiThread.MultiThreadData out;
+Ms0 f3 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
+Ms0 f3 actionDecl 'com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data out;
 ' #txt
 Ms0 f3 actionTable 'out=in;
 ' #txt
@@ -65,14 +65,14 @@ Ms0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Ms0 f3 83 147 26 26 -15 12 #rect
 Ms0 f3 @|RichDialogProcessStartIcon #fIcon
-Ms0 f4 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f4 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f4 guid 164D120CF8E4D97C #txt
 Ms0 f4 211 147 26 26 0 12 #rect
 Ms0 f4 @|RichDialogEndIcon #fIcon
 Ms0 f5 expr out #txt
 Ms0 f5 109 160 211 160 #arcP
 Ms0 f11 guid 164FF7E8C068A95A #txt
-Ms0 f11 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f11 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f11 method callService() #txt
 Ms0 f11 disableUIEvents false #txt
 Ms0 f11 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
@@ -91,16 +91,16 @@ Ms0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Ms0 f11 91 291 26 26 -33 15 #rect
 Ms0 f11 @|RichDialogMethodStartIcon #fIcon
-Ms0 f6 actionDecl 'com.axonactive.workshop.component.backend.MultiThread.MultiThreadData out;
+Ms0 f6 actionDecl 'com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data out;
 ' #txt
 Ms0 f6 actionTable 'out=in;
 ' #txt
-Ms0 f6 actionCode 'import com.axonactive.workshop.backend.concurrency.rest.Address;
-import com.axonactive.workshop.backend.concurrency.rest.Person;
+Ms0 f6 actionCode 'import com.axonactive.workshop.backend.rest.Address;
+import com.axonactive.workshop.backend.rest.Person;
 import javax.faces.context.FacesContext;
 import com.axonactive.workshop.backend.UIComponentUtils;
 import org.primefaces.context.RequestContext;
-import com.axonactive.workshop.backend.concurrency.rest.RestClient;
+import com.axonactive.workshop.backend.rest.RestClient;
 
 in.personalInformation.person = RestClient.getInstance().getPersonById(in.selectedId);
 in.personalInformation.address =  RestClient.getInstance().getAddressById(in.selectedId);
@@ -110,7 +110,7 @@ RequestContext.getCurrentInstance().update(UIComponentUtils.getFullId("form",Fac
 
 ' #txt
 Ms0 f6 security system #txt
-Ms0 f6 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f6 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -122,18 +122,18 @@ Ms0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Ms0 f6 328 282 128 44 -60 -8 #rect
 Ms0 f6 @|StepIcon #fIcon
-Ms0 f1 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f1 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f1 339 51 26 26 0 12 #rect
 Ms0 f1 @|RichDialogProcessEndIcon #fIcon
-Ms0 f2 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f2 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f2 667 291 26 26 0 12 #rect
 Ms0 f2 @|RichDialogProcessEndIcon #fIcon
-Ms0 f9 actionDecl 'com.axonactive.workshop.component.backend.MultiThread.MultiThreadData out;
+Ms0 f9 actionDecl 'com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data out;
 ' #txt
 Ms0 f9 actionTable 'out=in;
 ' #txt
 Ms0 f9 actionCode 'in.totalTime = System.currentTimeMillis();' #txt
-Ms0 f9 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f9 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -149,12 +149,12 @@ Ms0 f12 expr out #txt
 Ms0 f12 117 304 176 304 #arcP
 Ms0 f7 expr out #txt
 Ms0 f7 288 304 328 304 #arcP
-Ms0 f15 actionDecl 'com.axonactive.workshop.component.backend.MultiThread.MultiThreadData out;
+Ms0 f15 actionDecl 'com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data out;
 ' #txt
 Ms0 f15 actionTable 'out=in;
 ' #txt
 Ms0 f15 actionCode 'in.totalTime = System.currentTimeMillis() - in.totalTime;' #txt
-Ms0 f15 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f15 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -170,18 +170,18 @@ Ms0 f16 expr out #txt
 Ms0 f16 456 304 480 304 #arcP
 Ms0 f8 expr out #txt
 Ms0 f8 624 304 667 304 #arcP
-Ms0 f17 actionDecl 'com.axonactive.workshop.component.backend.MultiThread.MultiThreadData out;
+Ms0 f17 actionDecl 'com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data out;
 ' #txt
 Ms0 f17 actionTable 'out=in;
 ' #txt
 Ms0 f17 actionCode 'import java.util.ArrayList;
-import com.axonactive.workshop.backend.concurrency.rest.PersonalInformation;
+import com.axonactive.workshop.backend.rest.PersonalInformation;
 in.personalInformation = new PersonalInformation();
 
 in.personIds = new ArrayList ();
 in.personIds.add("0");
 in.personIds.add("1");' #txt
-Ms0 f17 type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+Ms0 f17 type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 Ms0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -197,7 +197,7 @@ Ms0 f10 expr out #txt
 Ms0 f10 108 63 154 63 #arcP
 Ms0 f13 expr out #txt
 Ms0 f13 266 63 339 63 #arcP
->Proto Ms0 .type com.axonactive.workshop.component.backend.MultiThread.MultiThreadData #txt
+>Proto Ms0 .type com.axonactive.workshop.component.backend.BackendIssue1.BackendIssue1Data #txt
 >Proto Ms0 .processKind HTML_DIALOG #txt
 >Proto Ms0 -8 -8 16 16 16 26 #rect
 >Proto Ms0 '' #fIcon

@@ -1,4 +1,4 @@
-package com.axonactive.workshop.backend.concurrency.bestpractice;
+package com.axonactive.workshop.backend.section;
 
 import java.io.File;
 import java.io.FileNotFoundException;

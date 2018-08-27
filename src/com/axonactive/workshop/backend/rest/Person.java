@@ -1,4 +1,4 @@
-package com.axonactive.workshop.backend.concurrency.rest;
+package com.axonactive.workshop.backend.rest;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

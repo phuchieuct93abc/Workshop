@@ -33,7 +33,7 @@ Wp0 @RichDialog f17 '' #zField
 Wp0 @PushWFArc f18 '' #zField
 Wp0 @PushWFArc f19 '' #zField
 >Proto Wp0 Wp0 Workshop #zField
-Wp0 f0 outLink concurrency.ivp #txt
+Wp0 f0 outLink BackendIssue2.ivp #txt
 Wp0 f0 type com.axonactive.workshop.Data #txt
 Wp0 f0 inParamDecl '<> param;' #txt
 Wp0 f0 actionDecl 'com.axonactive.workshop.Data out;
@@ -41,7 +41,7 @@ Wp0 f0 actionDecl 'com.axonactive.workshop.Data out;
 Wp0 f0 guid 164D11E537451931 #txt
 Wp0 f0 requestEnabled true #txt
 Wp0 f0 triggerEnabled false #txt
-Wp0 f0 callSignature concurrency() #txt
+Wp0 f0 callSignature BackendIssue2() #txt
 Wp0 f0 persist false #txt
 Wp0 f0 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -54,21 +54,21 @@ Wp0 f0 showInStartList 1 #txt
 Wp0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>concurrency</name>
-        <nameStyle>11,5,7
+        <name>BackendIssue2</name>
+        <nameStyle>13,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Wp0 f0 @C|.responsibility Everybody #txt
-Wp0 f0 81 49 30 30 -33 17 #rect
+Wp0 f0 81 49 30 30 -43 17 #rect
 Wp0 f0 @|StartRequestIcon #fIcon
 Wp0 f1 type com.axonactive.workshop.Data #txt
 Wp0 f1 305 49 30 30 0 15 #rect
 Wp0 f1 @|EndIcon #fIcon
 Wp0 f2 targetWindow NEW #txt
 Wp0 f2 targetDisplay TOP #txt
-Wp0 f2 richDialogId com.axonactive.workshop.component.backend.Concurrency #txt
+Wp0 f2 richDialogId com.axonactive.workshop.component.backend.BackendIssue2 #txt
 Wp0 f2 startMethod start() #txt
 Wp0 f2 type com.axonactive.workshop.Data #txt
 Wp0 f2 requestActionDecl '<> param;' #txt
@@ -85,7 +85,7 @@ Wp0 f3 expr out #txt
 Wp0 f3 111 64 168 64 #arcP
 Wp0 f4 expr out #txt
 Wp0 f4 280 64 305 64 #arcP
-Wp0 f5 outLink multiThread.ivp #txt
+Wp0 f5 outLink BackendIssue1.ivp #txt
 Wp0 f5 type com.axonactive.workshop.Data #txt
 Wp0 f5 inParamDecl '<> param;' #txt
 Wp0 f5 actionDecl 'com.axonactive.workshop.Data out;
@@ -93,7 +93,7 @@ Wp0 f5 actionDecl 'com.axonactive.workshop.Data out;
 Wp0 f5 guid 164D120EB7585AFB #txt
 Wp0 f5 requestEnabled true #txt
 Wp0 f5 triggerEnabled false #txt
-Wp0 f5 callSignature multiThread() #txt
+Wp0 f5 callSignature BackendIssue1() #txt
 Wp0 f5 persist false #txt
 Wp0 f5 taskData 'TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
@@ -106,21 +106,21 @@ Wp0 f5 showInStartList 1 #txt
 Wp0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>multiThread</name>
-        <nameStyle>11,5,7
+        <name>BackendIssue1</name>
+        <nameStyle>13,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Wp0 f5 @C|.responsibility Everybody #txt
-Wp0 f5 81 177 30 30 -33 17 #rect
+Wp0 f5 81 177 30 30 -43 17 #rect
 Wp0 f5 @|StartRequestIcon #fIcon
 Wp0 f6 type com.axonactive.workshop.Data #txt
 Wp0 f6 305 177 30 30 0 15 #rect
 Wp0 f6 @|EndIcon #fIcon
 Wp0 f7 targetWindow NEW #txt
 Wp0 f7 targetDisplay TOP #txt
-Wp0 f7 richDialogId com.axonactive.workshop.component.backend.MultiThread #txt
+Wp0 f7 richDialogId com.axonactive.workshop.component.backend.BackendIssue1 #txt
 Wp0 f7 startMethod start() #txt
 Wp0 f7 type com.axonactive.workshop.Data #txt
 Wp0 f7 requestActionDecl '<> param;' #txt

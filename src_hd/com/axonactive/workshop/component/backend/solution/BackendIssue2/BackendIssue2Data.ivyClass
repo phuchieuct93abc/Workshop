@@ -1,0 +1,14 @@
+BackendIssue2Data #class
+com.axonactive.workshop.component.backend.solution.BackendIssue2 #namespace
+serviceId String #field
+serviceId PERSISTENT #fieldModifier
+totalTime Long #field
+totalTime PERSISTENT #fieldModifier
+result String #field
+result PERSISTENT #fieldModifier
+jsonPath String #field
+jsonPath PERSISTENT #fieldModifier
+age String #field
+age PERSISTENT #fieldModifier
+services java.util.List<com.axonactive.workshop.backend.solution.concurrency.bestpractice.ServiceType> #field
+services PERSISTENT #fieldModifier

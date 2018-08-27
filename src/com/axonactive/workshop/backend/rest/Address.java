@@ -1,4 +1,4 @@
-package com.axonactive.workshop.backend.concurrency.rest;
+package com.axonactive.workshop.backend.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

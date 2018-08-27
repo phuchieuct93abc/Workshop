@@ -1,6 +1,6 @@
-MultiThreadData #class
-com.axonactive.workshop.component.backend.MultiThread #namespace
-personalInformation com.axonactive.workshop.backend.concurrency.rest.PersonalInformation #field
+BackendIssue1Data #class
+com.axonactive.workshop.component.backend.BackendIssue1 #namespace
+personalInformation com.axonactive.workshop.backend.rest.PersonalInformation #field
 personalInformation PERSISTENT #fieldModifier
 totalTime Long #field
 totalTime PERSISTENT #fieldModifier
