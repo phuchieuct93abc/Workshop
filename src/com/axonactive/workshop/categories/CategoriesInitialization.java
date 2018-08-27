@@ -8,7 +8,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 import ch.ivyteam.ivy.environment.Ivy;
 
 import com.opencsv.bean.CsvToBeanBuilder;
@@ -37,7 +36,7 @@ public class CategoriesInitialization {
 	private <T> List<T> loadContent(String csvPath, Class<T> clazz, int skipLines) {
 		try {
 			// This one simulates for heavy resource loading
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			Ivy.log().warn("Interupt by someone....", e);
 		}
