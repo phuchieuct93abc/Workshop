@@ -10,7 +10,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public abstract class ParserJsonService {
-	protected static final String filePath = "D:\\GIT\\ivy\\Workshop\\resources\\test.json";
 	protected static final String AGE = "age";
 	
 	public abstract int count(String file, int age);

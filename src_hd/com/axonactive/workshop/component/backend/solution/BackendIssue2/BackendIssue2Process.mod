@@ -95,7 +95,6 @@ import com.axonactive.workshop.backend.UIComponentUtils;
 import org.primefaces.context.RequestContext;
 
 in.totalTime = System.currentTimeMillis();
-ivy.log.fatal(in.serviceId);
 in.result = ServiceType.getService(in.serviceId).getTotalAge(in.jsonPath, Integer.parseInt(in.age)).toString();
 in.totalTime = System.currentTimeMillis() - in.totalTime;
 

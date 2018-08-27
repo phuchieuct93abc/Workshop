@@ -1,7 +1,6 @@
 package com.axonactive.workshop.backend.solution.concurrency.bestpractice;
 
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.Optional;
 
 import com.axonactive.workshop.backend.section.ParseJsonService;
@@ -40,14 +39,14 @@ public enum ServiceType {
 	
 	public static ServiceType getService (String id) {
 		Optional<ServiceType> service = Arrays.asList(ServiceType.values()).stream().filter(item -> item.getId().equals(id)).findFirst();
-		return Objects.nonNull(service) ? service.get() : null;
+		return service.isPresent() ? service.get() : null;
  	}
 
 	public String getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	protected void setId(String id) {
 		this.id = id;
 	}
 
@@ -55,7 +54,7 @@ public enum ServiceType {
 		return description;
 	}
 
-	public void setDescription(String description) {
+	protected void setDescription(String description) {
 		this.description = description;
 	}
 
